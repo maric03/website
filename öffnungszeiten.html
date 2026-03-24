@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fabelhafte Funde</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-strip"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo-link">
+        <img src="logo.jpg" alt="Fabelhafte Funde Logo" class="logo" />
+      </a>
+
+      <nav class="main-nav">
+        <a href="/">Startseite</a>
+        <a href="#ueber">Über uns</a>
+        <a href="#sortiment">Sortiment</a>
+        <a href="/öffnungszeiten/">Öffnungszeiten</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+    <div class="header-scallop"></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-bottom-scallop"></div>
+
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>Fabelhafte Funde</h1>
+          <p class="hero-subtitle">Second-Hand-Store in Ubstadt-Weiher</p>
+          <p class="hero-claim">Nachhaltige Kleidung und besondere Fundstücke.</p>
+          <a href="#zeiten" class="cta-button">Öffnungszeiten ansehen</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="sortiment">
+      <div class="container">
+        <div class="section-title">
+          <span class="ornament-line"></span>
+          <h2>Das erwartet dich</h2>
+          <span class="ornament-line"></span>
+        </div>
+
+        <div class="card-grid">
+          <article class="info-card">
+            <img src="icon-dress.png" alt="Kleidung für Frauen" class="card-icon" />
+            <h3>Kleidung für Frauen</h3>
+            <p>Frauen, Teeens,<br>Fräuen und Bingwerken</p>
+          </article>
+
+          <article class="info-card">
+            <img src="icon-shirt.png" alt="Männer und Teens" class="card-icon" />
+            <h3>Männer &amp; Teens</h3>
+            <p>Junge, Angeboten<br>und Dekoartikel</p>
+          </article>
+
+          <article class="info-card">
+            <img src="icon-bear.png" alt="Kinderartikel" class="card-icon" />
+            <h3>Kinderartikel</h3>
+            <p>Tagns, Geschenke,<br>und Möbel</p>
+          </article>
+
+          <article class="info-card">
+            <img src="icon-lamp.png" alt="Haushalts- und Dekoartikel" class="card-icon" />
+            <h3>Haushalts- &amp;<br>Dekoartikel</h3>
+            <p>Möbel &amp; besondere<br>Fundstücke</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light gallery-section" id="galerie">
+      <div class="container">
+        <div class="section-title">
+          <span class="ornament-line"></span>
+          <h2>Galerie</h2>
+          <span class="ornament-line"></span>
+        </div>
+
+        <div class="gallery-grid">
+          <img src="gallery-1.jpg" alt="Galeriebild 1">
+          <img src="gallery-2.jpg" alt="Galeriebild 2">
+          <img src="gallery-3.jpg" alt="Galeriebild 3">
+          <img src="gallery-4.jpg" alt="Galeriebild 4">
+        </div>
+
+        <div class="gallery-button-wrap">
+          <a href="#" class="cta-button cta-small">Mehr Bilder ansehen</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="hours-section" id="zeiten">
+      <div class="container hours-grid">
+        <div class="hours-text">
+          <h2>Öffnungszeiten</h2>
+          <p class="hours-day">Jeden Samstag</p>
+          <p class="hours-time">11:00 – 16:00 Uhr</p>
+          <p class="hours-address" id="kontakt">
+            Bruchsaler Straße 9a<br>
+            76698 Ubstadt-Weiher
+          </p>
+        </div>
+
+        <div class="map-card">
+          <iframe
+            title="Karte Fabelhafte Funde"
+            src="https://www.google.com/maps?q=Bruchsaler%20Stra%C3%9Fe%209a,%2076698%20Ubstadt-Weiher&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
