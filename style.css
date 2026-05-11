@@ -1,7 +1,10 @@
 /* ==========================================================================
    BASIS CSS (Dein bestehender Code)
    ========================================================================== */
-
+html {
+  /* Reserviert den Platz für die Scrollbar, zeigt sie aber nur bei Bedarf */
+  scrollbar-gutter: stable;
+}
 :root {
   --bg-main: #f4ece8;
   --bg-light: #f7f0ec;
