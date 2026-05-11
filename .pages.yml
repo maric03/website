@@ -8,6 +8,7 @@ content:
       - name: zeiten
         label: "Öffnungszeiten Liste"
         type: list
+        # Hier ist der wichtige Teil für die Felder pro Zeile:
         fields:
           - name: datum
             label: "Datum"
