@@ -11,47 +11,69 @@
 
   <link rel="stylesheet" href="/style.css" />
 </head>
-<body style="font-family: 'Georgia', serif; background-color: #fdf6f2; color: #5a4a42; margin: 0; padding: 0;">
+<body style="font-family: 'Segoe UI', Arial, sans-serif; background-color: #f2e8e4; color: #5a4a42; margin: 0; padding: 0;">
 
-    <header style="text-align: center; padding: 40px 20px; background-color: #ffffff; border-bottom: 1px solid #e2d1c3;">
-        <h1 style="color: #8c6473; font-size: 2.5rem; margin: 0;">Öffnungszeiten</h1>
-        <p style="font-style: italic; color: #a68b8b; margin-top: 10px;">Wir freuen uns auf deinen Besuch bei "Fabelhafte Funde".</p>
-    </header>
+     <div class="top-strip"></div>
 
-    <main style="max-width: 900px; margin: 40px auto; padding: 20px; background: #ffffff; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo-link">
+        <img src="logo.jpg" alt="Fabelhafte Funde Logo" class="logo" />
+      </a>
+
+      <nav class="main-nav">
+        <a href="/">Startseite</a>
+        <a href="#ueber">Über uns</a>
+        <a href="#sortiment">Sortiment</a>
+        <a href="/oeffnungszeiten/">Öffnungszeiten</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+    <div class="header-scallop"></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-bottom-scallop"></div>
+
+    <main style="max-width: 800px; margin: 0 auto; padding: 0 20px 60px 20px;">
         
-        <section style="text-align: center; margin-bottom: 50px;">
-            <h2 style="color: #8c6473; border-bottom: 1px solid #eee; padding-bottom: 10px;">Reguläre Zeiten</h2>
-            <p style="font-size: 1.2rem; margin: 20px 0;">
-                <strong>Jeden Samstag:</strong><br>
-                11:00 – 16:00 Uhr
-            </p>
+        <section style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-family: 'Georgia', serif; color: #8c6473; font-size: 2rem; font-weight: normal; margin-bottom: 25px;">Das erwartet dich</h2>
+            <div style="background: #ffffff; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                <p style="font-size: 1.2rem; margin: 10px 0;"><strong>Jeden Samstag</strong></p>
+                <p style="font-size: 1.1rem; color: #8c6473;">11:00 – 16:00 Uhr</p>
+            </div>
         </section>
 
-        <section id="sonderzeiten-section">
-            <h2 style="color: #8c6473; text-align: center; margin-bottom: 20px;">Besondere Termine & Urlaub</h2>
-            <p style="text-align: center; font-size: 0.9rem; color: #a68b8b; margin-bottom: 20px;">(Hier findest du Infos zu Betriebsferien oder gesonderten Samstagen)</p>
-            
-            <table style="width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 10px;">
-                <thead>
-                    <tr style="background-color: #b08494; color: white;">
-                        <th style="padding: 15px; text-align: left;">Datum / Zeitraum</th>
-                        <th style="padding: 15px; text-align: left;">Status</th>
-                        <th style="padding: 15px; text-align: left;">Anmerkung</th>
-                    </tr>
-                </thead>
-                <tbody id="oeffnungszeiten-body">
-                    <tr>
-                        <td colspan="3" style="padding: 20px; text-align: center; color: #ccc;">Lade aktuelle Termine...</td>
-                    </tr>
-                </tbody>
-            </table>
+        <section>
+            <div style="text-align: center; margin-bottom: 30px;">
+                 <h2 style="font-family: 'Georgia', serif; color: #8c6473; font-size: 2rem; font-weight: normal; margin-bottom: 10px;">Termine & Urlaub</h2>
+                 <p style="font-size: 0.9rem; color: #a68b8b; font-style: italic;">Aktuelle Infos zu Betriebsferien oder gesonderten Tagen</p>
+            </div>
+
+            <div style="background: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid #f2e8e4;">
+                            <th style="padding: 20px; color: #8c6473; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Datum</th>
+                            <th style="padding: 20px; color: #8c6473; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Status</th>
+                            <th style="padding: 20px; color: #8c6473; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Anmerkung</th>
+                        </tr>
+                    </thead>
+                    <tbody id="oeffnungszeiten-body">
+                        </tbody>
+                </table>
+            </div>
         </section>
+
     </main>
 
-    <footer style="text-align: center; padding: 40px; color: #a68b8b; font-size: 0.9rem;">
-        <p>Bruchsaler Straße 9a, 76698 Ubstadt-Weiher</p>
-        <a href="index.html" style="color: #b08494; text-decoration: none; font-weight: bold;">← Zurück zur Startseite</a>
+    <footer style="text-align: center; padding: 40px; background-color: #b08494; color: #ffffff; margin-top: 40px;">
+        <p style="margin-bottom: 10px;">Bruchsaler Straße 9a, 76698 Ubstadt-Weiher</p>
+        <a href="index.html" style="color: #ffffff; text-decoration: underline; font-size: 0.9rem;">Zurück zur Startseite</a>
     </footer>
 
     <script>
@@ -59,30 +81,23 @@
             .then(response => response.json())
             .then(data => {
                 const tbody = document.getElementById('oeffnungszeiten-body');
-                
-                if (data.length === 0) {
-                    tbody.innerHTML = '<tr><td colspan="3" style="padding: 20px; text-align: center;">Aktuell stehen keine außergewöhnlichen Termine an.</td></tr>';
+                if (!data || data.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="3" style="padding: 30px; text-align: center; color: #a68b8b;">Momentan keine Sondertermine geplant.</td></tr>';
                     return;
                 }
-
-                tbody.innerHTML = ''; // Platzhalter leeren
-                data.forEach((item, index) => {
-                    const row = document.createElement('tr');
-                    // Wechselnde Hintergrundfarbe für bessere Lesbarkeit
-                    row.style.backgroundColor = index % 2 === 0 ? '#fafafa' : '#ffffff';
-                    row.style.borderBottom = '1px solid #eee';
-                    
-                    row.innerHTML = `
-                        <td style="padding: 15px;">${item.datum}</td>
-                        <td style="padding: 15px; font-weight: bold; color: ${item.status.toLowerCase().includes('zu') || item.status.toLowerCase().includes('geschlossen') ? '#c0392b' : '#27ae60'};">${item.status}</td>
-                        <td style="padding: 15px; font-style: italic;">${item.grund || '-'}</td>
-                    `;
-                    tbody.appendChild(row);
+                tbody.innerHTML = '';
+                data.forEach(item => {
+                    const row = `
+                        <tr style="border-bottom: 1px solid #f9f4f2;">
+                            <td style="padding: 20px;">${item.datum}</td>
+                            <td style="padding: 20px; color: #b08494; font-weight: bold;">${item.status}</td>
+                            <td style="padding: 20px; font-style: italic; color: #8c6473;">${item.grund || '-'}</td>
+                        </tr>`;
+                    tbody.innerHTML += row;
                 });
             })
             .catch(err => {
-                console.error("Fehler beim Laden:", err);
-                document.getElementById('oeffnungszeiten-body').innerHTML = '<tr><td colspan="3" style="padding: 20px; text-align: center; color: #c0392b;">Termine konnten nicht geladen werden.</td></tr>';
+                document.getElementById('oeffnungszeiten-body').innerHTML = '<tr><td colspan="3" style="padding: 30px; text-align: center; color: #b08494;">Infos folgen in Kürze.</td></tr>';
             });
     </script>
 </body>
