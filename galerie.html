@@ -5,69 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sortiment & Galerie - Fabelhafte Funde</title>
     <link rel="stylesheet" href="style.css" />
-    
+    <style>
+        /* Kleiner Bonus: Sanftes Scrollen, wenn man auf die Karten klickt */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Verhindert, dass die Links das Design (Farbe/Unterstreichung) verändern */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        /* Sorgt dafür, dass beim Springen der Header nichts verdeckt */
+        .galerie-item {
+            scroll-margin-top: 120px;
+        }
+    </style>
 </head>
 <body>
- <div class="top-strip"></div>
+    <div class="top-strip"></div>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#top" class="logo-link">
-        <img src="logo.jpg" alt="Fabelhafte Funde Logo" class="logo" />
-      </a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#top" class="logo-link">
+                <!-- BILD HIER: Dein Logo -->
+                <img src="logo.jpg" alt="Fabelhafte Funde Logo" class="logo" />
+            </a>
 
-      <nav class="main-nav">
-        <a href="index.html">Startseite</a>
-        <a href="/oeffnungszeiten/">Öffnungszeiten</a>
-        <a href="/">Sortiment/Galerie</a>
-        <a href="kontakt.html">Kontakt</a>
-      </nav>
-    </div>
-    <div class="header-scallop"></div>
-  </header>
+            <nav class="main-nav">
+                <a href="index.html">Startseite</a>
+                <a href="/oeffnungszeiten/">Öffnungszeiten</a>
+                <a href="/">Sortiment/Galerie</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+        </div>
+        <div class="header-scallop"></div>
+    </header>
 
     <div class="content-wrapper">
 
-        <div class="sortiment-container">
-            <h1 class="section-title">Unser Sortiment</h1>
-            
-            <div class="sortiment-buttons">
-                <a href="#frauen" class="sortiment-btn">Kleidung für Frauen</a>
-                <a href="#maenner" class="sortiment-btn">Männer & Teens</a>
-                <a href="#kinder" class="sortiment-btn">Kinderartikel</a>
-                <a href="#haushalt" class="sortiment-btn">Haushalts- & Dekoartikel</a>
+        <section class="section section-light" id="sortiment">
+            <div class="container">
+                <div class="section-title">
+                    <span class="ornament-line"></span>
+                    <h2>Das erwartet dich</h2>
+                    <span class="ornament-line"></span>
+                </div>
+
+                <div class="card-grid">
+                    <!-- KARTE 1: FRAUEN -->
+                    <a href="#frauen" class="card-link">
+                        <article class="info-card">
+                            <!-- BILD HIER: Icon Kleid -->
+                            <img src="icon-dress.png" alt="Kleidung für Frauen" class="card-icon" />
+                            <h3>Kleidung für Frauen</h3>
+                            <p>Frauen, Teens,<br>Accessoires und mehr</p>
+                        </article>
+                    </a>
+
+                    <!-- KARTE 2: MÄNNER -->
+                    <a href="#maenner" class="card-link">
+                        <article class="info-card">
+                            <!-- BILD HIER: Icon Shirt -->
+                            <img src="icon-shirt.png" alt="Männer und Teens" class="card-icon" />
+                            <h3>Männer &amp; Teens</h3>
+                            <p>Mode für Ihn,<br>Angebote und Deko</p>
+                        </article>
+                    </a>
+
+                    <!-- KARTE 3: KINDER -->
+                    <a href="#kinder" class="card-link">
+                        <article class="info-card">
+                            <!-- BILD HIER: Icon Bär -->
+                            <img src="icon-bear.png" alt="Kinderartikel" class="card-icon" />
+                            <h3>Kinderartikel</h3>
+                            <p>Trends, Geschenke<br>und Spielzeug</p>
+                        </article>
+                    </a>
+
+                    <!-- KARTE 4: HAUSHALT -->
+                    <a href="#haushalt" class="card-link">
+                        <article class="info-card">
+                            <!-- BILD HIER: Icon Lampe -->
+                            <img src="icon-lamp.png" alt="Haushalts- und Dekoartikel" class="card-icon" />
+                            <h3>Haushalts- &amp;<br>Dekoartikel</h3>
+                            <p>Möbel &amp; besondere<br>Fundstücke</p>
+                        </article>
+                    </a>
+                </div>
             </div>
-        </div>
+        </section>
 
         <div class="galerie-section">
             <h2 class="galerie-title">Galerie</h2>
 
             <div class="galerie-grid">
 
+                <!-- GALERIE BEREICH: FRAUEN -->
                 <div class="galerie-item" id="frauen">
                     <div class="galerie-label">Kleidung für Frauen</div>
                     <div class="galerie-image-container">
+                        <!-- BILD HIER: Hauptbild Frauenabteilung -->
                         <img src="images/galerie-frauen.jpg" alt="Kleiderständer mit Frauenkleidung">
                     </div>
                 </div>
 
+                <!-- GALERIE BEREICH: MÄNNER -->
                 <div class="galerie-item" id="maenner">
                     <div class="galerie-label">Männer & Teens</div>
                     <div class="galerie-image-container">
+                        <!-- BILD HIER: Hauptbild Männerabteilung -->
                         <img src="images/galerie-maenner.jpg" alt="Regal mit gefalteter Männerkleidung">
                     </div>
                 </div>
 
+                <!-- GALERIE BEREICH: KINDER -->
                 <div class="galerie-item" id="kinder">
                     <div class="galerie-label">Kinderartikel</div>
                     <div class="galerie-image-container">
+                        <!-- BILD HIER: Hauptbild Kinderabteilung -->
                         <img src="images/galerie-kinder.jpg" alt="Bunte Kinderkleidung an der Wand">
                     </div>
                 </div>
 
+                <!-- GALERIE BEREICH: HAUSHALT -->
                 <div class="galerie-item" id="haushalt">
                     <div class="galerie-label">Haushalts- & Dekoartikel</div>
                     <div class="galerie-image-container">
+                        <!-- BILD HIER: Hauptbild Haushalt/Deko -->
                         <img src="images/galerie-haushalt.jpg" alt="Gedeckter Tisch mit Vintage-Deko">
                     </div>
                 </div>
@@ -76,5 +141,5 @@
         </div>
 
     </div>
-    </body>
+</body>
 </html>
