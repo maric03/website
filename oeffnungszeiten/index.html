@@ -77,7 +77,7 @@
     </footer>
 
     <script>
-        fetch('oeffnungszeiten.json')
+        fetch('../zeiten.json')
             .then(response => response.json())
             .then(data => {
                 const tbody = document.getElementById('oeffnungszeiten-body');
