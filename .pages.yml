@@ -1,20 +1,17 @@
 content:
   - name: sonderzeiten
     label: "Außergewöhnliche Öffnungszeiten"
-    type: file
-    path: "zeiten.json"
+    type: collection
+    path: "oeffnungszeiten"
     format: json
+    extension: json
     fields:
-      - name: ""
-        label: "Termine verwalten"
-        type: list
-        fields:
-          - name: datum
-            label: "Datum"
-            type: string
-          - name: status
-            label: "Status"
-            type: string
-          - name: grund
-            label: "Grund"
-            type: string
+      - name: datum
+        label: "Datum"
+        type: string
+      - name: status
+        label: "Status"
+        type: string
+      - name: grund
+        label: "Grund"
+        type: string
