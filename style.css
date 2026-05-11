@@ -63,7 +63,8 @@ a {
 
 .header-inner {
   min-height: 150px;
-  display: flex;
+  display: grid; /* Wir wechseln von Flex zu Grid für bessere Kontrolle */
+  grid-template-columns: auto 1fr; /* Logo nimmt Platz ein, Nav bekommt den Rest */
   align-items: center;
   gap: 42px;
 }
@@ -85,11 +86,15 @@ a {
 
 .main-nav {
   display: flex;
-  align-items: center;
+  justify-content: center; /* Das zentriert die Links innerhalb des verbleibenden Raums */
   gap: 42px;
   flex-wrap: wrap;
   color: #70535b;
   font-size: 1.02rem;
+  /* Kleiner Trick: Wir geben der Nav ein margin-right, 
+     das exakt so groß ist wie die Breite des Logos, 
+     damit die Mitte mathematisch perfekt ist */
+  margin-right: 132px; 
 }
 
 .main-nav a {
@@ -412,17 +417,13 @@ a {
   }
 
   .header-inner {
-    min-height: auto;
+    display: flex; /* Auf dem Handy wieder untereinander */
     flex-direction: column;
-    justify-content: center;
-    gap: 18px;
-    padding: 18px 0 24px;
+    grid-template-columns: 1fr;
   }
-
   .main-nav {
+    margin-right: 0; /* Margin auf Handy entfernen */
     justify-content: center;
-    gap: 14px 18px;
-    text-align: center;
   }
 
   .hero {
