@@ -473,3 +473,158 @@ a {
     font-size: 1.6rem;
   }
 }
+
+        /* --- HAUPTINHALT STYLES --- */
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Überschriften-Stil der Hauptseite */
+        h1.section-title {
+            font-family: 'Georgia', serif; /* Beispiel für die ornate Schrift */
+            font-size: 2.8em;
+            color: #5d4037; /* Dunkelbraun/Altrose der Überschriften */
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Schnörkel-Elemente */
+        h1.section-title::before,
+        h1.section-title::after {
+            content: '❦'; /* Beispiel-Schnörkel */
+            font-size: 0.6em;
+            color: #bcaaa4;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        h1.section-title::before { left: -40px; }
+        h1.section-title::after { right: -40px; }
+
+
+        /* --- SORTIMENT BUTTONS STYLES --- */
+        .sortiment-container {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .sortiment-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        /* Button-Stil der Hauptseite übernommen (Altrose) */
+        .sortiment-btn {
+            background-color: #b08d92; /* Altrose/Puder-Ton */
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1em;
+            border-radius: 8px; /* Runde Ecken der Buttons */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-family: inherit;
+            text-decoration: none; /* Falls es <a> Tags sind */
+            display: inline-block;
+        }
+
+        .sortiment-btn:hover {
+            background-color: #9c7a7e; /* Etwas dunkler beim Hover */
+            transform: translateY(-2px);
+        }
+
+
+        /* --- GALERIE STYLES --- */
+        .galerie-section {
+            margin-top: 60px;
+        }
+
+        h2.galerie-title {
+            font-family: 'Georgia', serif;
+            font-size: 2.2em;
+            color: #5d4037;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h2.galerie-title::before,
+        h2.galerie-title::after {
+            content: '❁'; /* Anderer Schnörkel */
+            font-size: 0.7em;
+            color: #bcaaa4;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h2.galerie-title::before { left: -35px; }
+        h2.galerie-title::after { right: -35px; }
+
+
+        .galerie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* Container für jedes Galerie-Item (mit Schatten und Abrundung) */
+        .galerie-item {
+            background: white;
+            border-radius: 15px; /* Runde Ecken der Boxen */
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Subtiler Schatten */
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eaeae0; /* Sehr feiner Rand */
+        }
+
+        .galerie-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Kategorie-Label über dem Bild */
+        .galerie-label {
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #5d4037;
+            background-color: #fdfaf3; /* Heller Hintergrund für das Label */
+            border-bottom: 1px solid #eaeae0;
+        }
+
+        /* Bild-Styling */
+        .galerie-image-container {
+            width: 100%;
+            height: 250px; /* Feste Höhe für Einheitlichkeit */
+            overflow: hidden;
+        }
+
+        .galerie-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Bild füllt den Container ohne Verzerrung */
+            display: block;
+        }
+
+        /* --- RESPONSIVE ANPASSUNGEN --- */
+        @media (max-width: 768px) {
+            h1.section-title { font-size: 2.2em; }
+            .sortiment-buttons { gap: 10px; }
+            .sortiment-btn { padding: 10px 18px; font-size: 0.9em; }
+        }
+    
