@@ -8,6 +8,8 @@ content:
       - name: zeiten
         label: "Öffnungszeiten Liste"
         type: list
+        # Das hier erzwingt die Darstellung der Unterfelder:
+        object: true
         fields:
           - name: datum
             label: "Datum"
@@ -17,4 +19,4 @@ content:
             type: string
           - name: grund
             label: "Grund"
-            type: string
+          - type: string
