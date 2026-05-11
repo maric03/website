@@ -725,3 +725,26 @@ html {
   /* Erzwingt den Scrollbalken immer, auch wenn kein Inhalt da ist */
   overflow-y: scroll;
 }
+.bild-container {
+  width: 300px; /* Beliebige Breite */
+  height: 300px; /* Beliebige Höhe */
+  
+  border-radius: 20px; /* Hier setzen wir die Abrundung an */
+  
+  /* Das ist der wichtigste Befehl: Er schneidet alles ab, 
+     was über die abgerundeten Ecken hinaussteht */
+  overflow: hidden; 
+  
+  /* Optional: Ein Schatten für besseren Effekt */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+}
+
+/* Wir stylen das Bild innerhalb des Containers */
+.bild-container img {
+  width: 100%;
+  height: 100%;
+  
+  /* Das sorgt dafür, dass das Bild den Container ausfüllt, 
+     ohne verzerrt zu werden (es wird beschnitten, falls nötig) */
+  object-fit: cover; 
+}
