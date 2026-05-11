@@ -5,8 +5,8 @@ content:
     path: "zeiten.json"
     format: json
     fields:
-      - name: zeiten
-        label: "Liste der Termine"
+      - name: ""
+        label: "Termine verwalten"
         type: list
         fields:
           - name: datum
