@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortiment & Galerie - Fabelhafte Funde</title>
+    <style>
+        /* --- ALLGEMEINE STYLES (aus Hauptseite übernommen) --- */
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Beispielschrifart */
+            background-color: #fdfaf3; /* Heller Creme-Ton der Hauptseite */
+            color: #4a4a4a;
+        }
+
+        /* --- HAUPTINHALT STYLES --- */
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Überschriften-Stil der Hauptseite */
+        h1.section-title {
+            font-family: 'Georgia', serif; /* Beispiel für die ornate Schrift */
+            font-size: 2.8em;
+            color: #5d4037; /* Dunkelbraun/Altrose der Überschriften */
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Schnörkel-Elemente */
+        h1.section-title::before,
+        h1.section-title::after {
+            content: '❦'; /* Beispiel-Schnörkel */
+            font-size: 0.6em;
+            color: #bcaaa4;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        h1.section-title::before { left: -40px; }
+        h1.section-title::after { right: -40px; }
+
+
+        /* --- SORTIMENT BUTTONS STYLES --- */
+        .sortiment-container {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .sortiment-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        /* Button-Stil der Hauptseite übernommen (Altrose) */
+        .sortiment-btn {
+            background-color: #b08d92; /* Altrose/Puder-Ton */
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1em;
+            border-radius: 8px; /* Runde Ecken der Buttons */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-family: inherit;
+            text-decoration: none; /* Falls es <a> Tags sind */
+            display: inline-block;
+        }
+
+        .sortiment-btn:hover {
+            background-color: #9c7a7e; /* Etwas dunkler beim Hover */
+            transform: translateY(-2px);
+        }
+
+
+        /* --- GALERIE STYLES --- */
+        .galerie-section {
+            margin-top: 60px;
+        }
+
+        h2.galerie-title {
+            font-family: 'Georgia', serif;
+            font-size: 2.2em;
+            color: #5d4037;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        h2.galerie-title::before,
+        h2.galerie-title::after {
+            content: '❁'; /* Anderer Schnörkel */
+            font-size: 0.7em;
+            color: #bcaaa4;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        h2.galerie-title::before { left: -35px; }
+        h2.galerie-title::after { right: -35px; }
+
+
+        .galerie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* Container für jedes Galerie-Item (mit Schatten und Abrundung) */
+        .galerie-item {
+            background: white;
+            border-radius: 15px; /* Runde Ecken der Boxen */
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Subtiler Schatten */
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #eaeae0; /* Sehr feiner Rand */
+        }
+
+        .galerie-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Kategorie-Label über dem Bild */
+        .galerie-label {
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #5d4037;
+            background-color: #fdfaf3; /* Heller Hintergrund für das Label */
+            border-bottom: 1px solid #eaeae0;
+        }
+
+        /* Bild-Styling */
+        .galerie-image-container {
+            width: 100%;
+            height: 250px; /* Feste Höhe für Einheitlichkeit */
+            overflow: hidden;
+        }
+
+        .galerie-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Bild füllt den Container ohne Verzerrung */
+            display: block;
+        }
+
+        /* --- RESPONSIVE ANPASSUNGEN --- */
+        @media (max-width: 768px) {
+            h1.section-title { font-size: 2.2em; }
+            .sortiment-buttons { gap: 10px; }
+            .sortiment-btn { padding: 10px 18px; font-size: 0.9em; }
+        }
+    </style>
+</head>
+<body>
+ <div class="top-strip"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo-link">
+        <img src="logo.jpg" alt="Fabelhafte Funde Logo" class="logo" />
+      </a>
+
+      <nav class="main-nav">
+        <a href="/">Startseite</a>
+        <a href="#ueber">Über uns</a>
+        <a href="#sortiment">Sortiment</a>
+        <a href="/oeffnungszeiten/">Öffnungszeiten</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+    <div class="header-scallop"></div>
+  </header>
+
+    <div class="content-wrapper">
+
+        <div class="sortiment-container">
+            <h1 class="section-title">Unser Sortiment</h1>
+            
+            <div class="sortiment-buttons">
+                <a href="#frauen" class="sortiment-btn">Kleidung für Frauen</a>
+                <a href="#maenner" class="sortiment-btn">Männer & Teens</a>
+                <a href="#kinder" class="sortiment-btn">Kinderartikel</a>
+                <a href="#haushalt" class="sortiment-btn">Haushalts- & Dekoartikel</a>
+            </div>
+        </div>
+
+        <div class="galerie-section">
+            <h2 class="galerie-title">Galerie</h2>
+
+            <div class="galerie-grid">
+
+                <div class="galerie-item" id="frauen">
+                    <div class="galerie-label">Kleidung für Frauen</div>
+                    <div class="galerie-image-container">
+                        <img src="images/galerie-frauen.jpg" alt="Kleiderständer mit Frauenkleidung">
+                    </div>
+                </div>
+
+                <div class="galerie-item" id="maenner">
+                    <div class="galerie-label">Männer & Teens</div>
+                    <div class="galerie-image-container">
+                        <img src="images/galerie-maenner.jpg" alt="Regal mit gefalteter Männerkleidung">
+                    </div>
+                </div>
+
+                <div class="galerie-item" id="kinder">
+                    <div class="galerie-label">Kinderartikel</div>
+                    <div class="galerie-image-container">
+                        <img src="images/galerie-kinder.jpg" alt="Bunte Kinderkleidung an der Wand">
+                    </div>
+                </div>
+
+                <div class="galerie-item" id="haushalt">
+                    <div class="galerie-label">Haushalts- & Dekoartikel</div>
+                    <div class="galerie-image-container">
+                        <img src="images/galerie-haushalt.jpg" alt="Gedeckter Tisch mit Vintage-Deko">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    </body>
+</html>
