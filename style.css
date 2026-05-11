@@ -718,3 +718,7 @@ a {
         gap: 10px;
     }
 }      
+html {
+  /* Erzwingt den Scrollbalken immer, auch wenn kein Inhalt da ist */
+  overflow-y: scroll;
+}
