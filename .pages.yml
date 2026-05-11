@@ -2,7 +2,7 @@ content:
   - name: sonderzeiten
     label: "Außergewöhnliche Öffnungszeiten"
     type: collection
-    path: "sonderzeiten_daten"
+    path: "oeffnungszeiten_daten"
     format: json
     extension: json
     fields:
