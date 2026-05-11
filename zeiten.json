@@ -1,3 +1,9 @@
 {
-  "zeiten": []
+  "zeiten": [
+    {
+      "datum": "Hier klicken zum Bearbeiten",
+      "status": "",
+      "grund": ""
+    }
+  ]
 }
