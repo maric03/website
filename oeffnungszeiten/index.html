@@ -72,28 +72,43 @@
     </footer>
 
     <script>
-        fetch('../zeiten.json')
-            .then(response => response.json())
-            .then(data => {
-                const tbody = document.getElementById('oeffnungszeiten-body');
-                if (!data || data.length === 0) {
-                    tbody.innerHTML = '<tr><td colspan="3" style="padding: 30px; text-align: center; color: #a68b8b;">Momentan keine Sondertermine geplant.</td></tr>';
-                    return;
-                }
-                tbody.innerHTML = '';
-                data.forEach(item => {
-                    const row = `
-                        <tr style="border-bottom: 1px solid #f9f4f2;">
-                            <td style="padding: 20px;">${item.datum}</td>
-                            <td style="padding: 20px; color: #b08494; font-weight: bold;">${item.status}</td>
-                            <td style="padding: 20px; font-style: italic; color: #8c6473;">${item.grund || '-'}</td>
-                        </tr>`;
-                    tbody.innerHTML += row;
-                });
-            })
-            .catch(err => {
-                document.getElementById('oeffnungszeiten-body').innerHTML = '<tr><td colspan="3" style="padding: 30px; text-align: center; color: #b08494;">Infos folgen in Kürze.</td></tr>';
-            });
-    </script>
+  // Wir laden die zeiten.json aus dem Hauptverzeichnis
+  // Wenn deine HTML im Unterordner liegt, nutze '../zeiten.json'
+  // Wenn deine HTML im Hauptverzeichnis liegt, nutze 'zeiten.json'
+  fetch('../zeiten.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Netzwerk-Antwort war nicht ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      const tbody = document.getElementById('oeffnungszeiten-body');
+      
+      // Wichtig: Wir greifen jetzt auf data.zeiten zu, 
+      // weil die JSON-Datei durch das CMS nun so strukturiert ist
+      if (data && data.zeiten && Array.isArray(data.zeiten)) {
+        tbody.innerHTML = ''; // Platzhalter leeren
+        
+        data.zeiten.forEach(item => {
+          const row = `
+            <tr>
+              <td style="padding: 10px; border: 1px solid #ddd;">${item.datum || '-'}</td>
+              <td style="padding: 10px; border: 1px solid #ddd;">${item.status || '-'}</td>
+              <td style="padding: 10px; border: 1px solid #ddd;">${item.grund || '-'}</td>
+            </tr>`;
+          tbody.innerHTML += row;
+        });
+      } else {
+        console.error("Datenformat ungültig: 'zeiten' Array nicht gefunden.");
+      }
+    })
+    .catch(err => {
+      console.error("Fehler beim Laden der Zeiten:", err);
+      // Optional: Verstecke die Tabelle, falls ein Fehler auftritt
+      const container = document.getElementById('zeiten-container');
+      if (container) container.style.display = 'none';
+    });
+</script>
 </body>
 </html>
