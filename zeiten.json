@@ -1,9 +1,7 @@
-{
-  "zeiten": [
-    {
-      "datum": "Hier klicken zum Bearbeiten",
-      "status": "",
-      "grund": ""
-    }
-  ]
-}
+[
+  {
+    "datum": "01.01.2026",
+    "status": "Geschlossen",
+    "grund": "Neujahr"
+  }
+]
