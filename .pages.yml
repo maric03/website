@@ -6,10 +6,8 @@ content:
     format: json
     fields:
       - name: zeiten
-        label: "Öffnungszeiten Liste"
+        label: "Liste der Termine"
         type: list
-        # Hier sagen wir dem CMS, was es als Vorschau anzeigen soll
-        item_label: "{{datum}}"
         fields:
           - name: datum
             label: "Datum"
