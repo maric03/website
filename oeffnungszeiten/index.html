@@ -39,6 +39,45 @@
           <h2>Öffnungszeiten</h2>
           <p class="hours-day">Jeden Samstag</p>
           <p class="hours-time">11:00 – 16:00 Uhr</p>
+          <!-- Die Tabelle, die gefüllt wird -->
+<div id="zeiten-container">
+<h3>Aktuelle Sonderöffnungszeiten</h3>
+<table border="1" style="width:100%; border-collapse: collapse;">
+<thead>
+<tr style="background:#eee;">
+<th>Datum</th>
+<th>Status</th>
+<th>Grund/Info</th>
+</tr>
+</thead>
+<tbody id="oeffnungszeiten-body">
+<!-- Hier erscheinen die Daten -->
+</tbody>
+</table>
+</div>
+
+<script>
+// Script zum Laden der JSON-Datei
+fetch('oeffnungszeiten.json')
+.then(response => response.json())
+.then(data => {
+const tbody = document.getElementById('oeffnungszeiten-body');
+tbody.innerHTML = ''; // Platzhalter leeren
+data.forEach(item => {
+const row = `<tr>
+<td>${item.datum}</td>
+<td>${item.status}</td>
+<td>${item.grund || '-'}</td>
+</tr>`;
+tbody.innerHTML += row;
+});
+})
+.catch(err => {
+console.error("Fehler beim Laden der Zeiten:", err);
+document.getElementById('zeiten-container').style.display =
+'none';
+});
+</script>
           <p class="hours-address" id="kontakt">
             Bruchsaler Straße 9a<br>
             76698 Ubstadt-Weiher
