@@ -676,4 +676,44 @@ a {
     min-width: 0;
   }
 }
-      
+/* Galerie Raster mit Klick-Funktion */
+.galerie-grid-klick {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.galerie-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Erzeugt perfekte Quadrate */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--card-border);
+    transition: transform 0.3s ease;
+}
+
+.galerie-img-wrapper:hover {
+    transform: scale(1.03);
+}
+
+.galerie-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Das ist der Zaubertrick für den Ausschnitt */
+    transition: filter 0.3s ease;
+}
+
+.galerie-img-wrapper:hover img {
+    filter: brightness(0.9);
+}
+
+/* Anpassung für mobile Geräte */
+@media (max-width: 600px) {
+    .galerie-grid-klick {
+        grid-template-columns: repeat(2, 1fr); /* 2 Bilder nebeneinander auf dem Handy */
+        gap: 10px;
+    }
+}      
