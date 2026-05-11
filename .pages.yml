@@ -2,16 +2,15 @@ content:
   - name: sonderzeiten
     label: "Außergewöhnliche Öffnungszeiten"
     type: collection
-    # Hier ist der entscheidende Teil: Pfad vom Hauptverzeichnis aus
-    path: "oeffnungszeiten/oeffnungszeiten.json"  
+    path: "oeffnungszeiten/oeffnungszeiten.json"
     format: json
     fields:
       - name: datum
-        label: "Datum / Zeitraum"
+        label: "Datum"
         type: string
       - name: status
-        label: "Status (z.B. Geschlossen oder Uhrzeit)"
+        label: "Status"
         type: string
       - name: grund
-        label: "Anmerkung (optional)"
+        label: "Anmerkung / Grund"
         type: string
