@@ -1,0 +1,16 @@
+content:
+- name: sonderzeiten
+label: "Außergewöhnliche Öffnungszeiten"
+type: collection
+path: "oeffnungszeiten.json"
+format: json
+fields:
+- name: datum
+label: "Datum / Zeitraum"
+type: string
+- name: status
+label: "Status (z.B. Geschlossen oder Uhrzeit)"
+type: string
+- name: grund
+label: "Anmerkung (optional)"
+type: string
