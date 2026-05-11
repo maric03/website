@@ -1,9 +1,3 @@
 {
-  "zeiten": [
-    {
-      "datum": "Bitte Datum eintragen",
-      "status": "Offen/Zu",
-      "grund": "Hier Grund eintragen"
-    }
-  ]
+  "zeiten": []
 }
