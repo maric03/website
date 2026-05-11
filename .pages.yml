@@ -12,5 +12,5 @@ content:
         label: "Status"
         type: string
       - name: grund
-        label: "Anmerkung / Grund"
+        label: "Grund"
         type: string
