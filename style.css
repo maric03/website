@@ -1,3 +1,7 @@
+/* ==========================================================================
+   BASIS CSS (Dein bestehender Code)
+   ========================================================================== */
+
 :root {
   --bg-main: #f4ece8;
   --bg-light: #f7f0ec;
@@ -378,6 +382,7 @@ a {
   display: block;
   flex: 1;
 }
+
 /* RESPONSIVE */
 
 @media (max-width: 1100px) {
@@ -474,157 +479,201 @@ a {
   }
 }
 
-        /* --- HAUPTINHALT STYLES --- */
-        .content-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+/* ==========================================================================
+   STILE FÜR DIE NEUE SEITE: Sortiment & Galerie
+   ========================================================================== */
 
-        /* Überschriften-Stil der Hauptseite */
-        h1.section-title {
-            font-family: 'Georgia', serif; /* Beispiel für die ornate Schrift */
-            font-size: 2.8em;
-            color: #5d4037; /* Dunkelbraun/Altrose der Überschriften */
-            text-align: center;
-            margin-bottom: 30px;
-            position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+/* Hauptinhalts-Container */
+.galerie-subpage-wrapper {
+  padding: 60px 0; /* Mehr Platz oben/unten */
+}
 
-        /* Schnörkel-Elemente */
-        h1.section-title::before,
-        h1.section-title::after {
-            content: '❦'; /* Beispiel-Schnörkel */
-            font-size: 0.6em;
-            color: #bcaaa4;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
+/* --- SORTIMENT SEKTION (Oben) --- */
 
-        h1.section-title::before { left: -40px; }
-        h1.section-title::after { right: -40px; }
+.sortiment-top {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.sortiment-top h1 {
+  margin: 0 0 24px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 4.8rem; /* Groß wie das h1 auf der Hauptseite */
+  color: var(--rose-deep);
+}
+
+.sortiment-intro-claim {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.1rem;
+  font-style: italic;
+  color: #76565d;
+  margin-bottom: 30px;
+}
+
+/* Button-Gruppe */
+.sortiment-jump-nav {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Button-Stil (Altrose) übernommen von .cta-button, aber kleiner */
+.category-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 250px;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 999px;
+  color: #fff8f5;
+  font-size: 1rem;
+  background: linear-gradient(to bottom, #bf8aa0, #ab7387); /* Dein Altrose */
+  border: 1px solid rgba(117, 79, 90, 0.24);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.12),
+    0 4px 10px rgba(109, 71, 83, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.18),
+    0 6px 15px rgba(109, 71, 83, 0.16);
+}
+
+/* --- GALERIE SEKTION (Unten) --- */
+
+.galerie-main {
+  padding-top: 30px;
+}
+
+.galerie-main h2 {
+  margin: 0 0 40px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4rem; /* Groß wie ein h2 */
+  font-weight: 500;
+  color: var(--rose-deep);
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Spezifische Schnörkel für das Galerie-h2 */
+.galerie-main h2::before,
+.galerie-main h2::after {
+  content: "❦";
+  font-size: 0.6em;
+  color: #bcaaa4;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.galerie-main h2::before { left: -45px; }
+.galerie-main h2::after { right: -45px; }
 
 
-        /* --- SORTIMENT BUTTONS STYLES --- */
-        .sortiment-container {
-            text-align: center;
-            margin-bottom: 60px;
-        }
+/* Kategorie-Box-Spezifisches Grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 Spalten */
+  gap: 22px; /* Etwas mehr Abstand */
+}
 
-        .sortiment-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
+/* Die Kategorie-Boxen (erben viel von .info-card) */
+.category-box {
+  position: relative;
+  background: #faf3ef; /* Dein Creme-Weiß */
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  text-align: center;
+  padding: 0 0 24px; /* Oben kein Padding, da Bild bündig */
+  box-shadow: var(--shadow);
+  overflow: hidden; /* Wichtig für das bündige Bild */
+  transition: transform 0.3s ease;
+}
 
-        /* Button-Stil der Hauptseite übernommen (Altrose) */
-        .sortiment-btn {
-            background-color: #b08d92; /* Altrose/Puder-Ton */
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 1em;
-            border-radius: 8px; /* Runde Ecken der Buttons */
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            font-family: inherit;
-            text-decoration: none; /* Falls es <a> Tags sind */
-            display: inline-block;
-        }
+.category-box:hover {
+  transform: translateY(-5px);
+}
 
-        .sortiment-btn:hover {
-            background-color: #9c7a7e; /* Etwas dunkler beim Hover */
-            transform: translateY(-2px);
-        }
+/* Das bündige Bild */
+.category-box img {
+  width: 100%;
+  height: 250px; /* Feste Höhe, wie auf Hauptseite */
+  aspect-ratio: auto;
+  object-fit: cover;
+  border-radius: 0; /* Keinen Eckenradius für das Bild */
+  margin-bottom: 20px;
+}
 
+.category-box h3 {
+  margin: 0 18px 12px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #5f454c;
+  line-height: 1.16;
+}
 
-        /* --- GALERIE STYLES --- */
-        .galerie-section {
-            margin-top: 60px;
-        }
+.category-box p {
+  margin: 0 18px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  line-height: 1.32;
+  color: #70565d;
+}
 
-        h2.galerie-title {
-            font-family: 'Georgia', serif;
-            font-size: 2.2em;
-            color: #5d4037;
-            text-align: center;
-            margin-bottom: 40px;
-            position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+/* --- RESPONSIVE ANPASSUNGEN FÜR DIE NEUE SEITE --- */
 
-        h2.galerie-title::before,
-        h2.galerie-title::after {
-            content: '❁'; /* Anderer Schnörkel */
-            font-size: 0.7em;
-            color: #bcaaa4;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        h2.galerie-title::before { left: -35px; }
-        h2.galerie-title::after { right: -35px; }
+@media (max-width: 1100px) {
+  .sortiment-top h1 {
+    font-size: 3.8rem;
+  }
 
+  .sortiment-intro-claim {
+    font-size: 1.8rem;
+  }
 
-        .galerie-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
+  .galerie-main h2 {
+    font-size: 3.2rem;
+  }
 
-        /* Container für jedes Galerie-Item (mit Schatten und Abrundung) */
-        .galerie-item {
-            background: white;
-            border-radius: 15px; /* Runde Ecken der Boxen */
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Subtiler Schatten */
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #eaeae0; /* Sehr feiner Rand */
-        }
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 Spalten */
+  }
+}
 
-        .galerie-item:hover {
-            transform: translateY(-5px);
-        }
+@media (max-width: 760px) {
+  .sortiment-top h1 {
+    font-size: 3rem;
+  }
 
-        /* Kategorie-Label über dem Bild */
-        .galerie-label {
-            padding: 15px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.1em;
-            color: #5d4037;
-            background-color: #fdfaf3; /* Heller Hintergrund für das Label */
-            border-bottom: 1px solid #eaeae0;
-        }
+  .sortiment-intro-claim {
+    font-size: 1.5rem;
+  }
 
-        /* Bild-Styling */
-        .galerie-image-container {
-            width: 100%;
-            height: 250px; /* Feste Höhe für Einheitlichkeit */
-            overflow: hidden;
-        }
+  .galerie-main h2 {
+    font-size: 2.6rem;
+  }
 
-        .galerie-image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Bild füllt den Container ohne Verzerrung */
-            display: block;
-        }
+  .galerie-main h2::before { left: -35px; }
+  .galerie-main h2::after { right: -35px; }
 
-        /* --- RESPONSIVE ANPASSUNGEN --- */
-        @media (max-width: 768px) {
-            h1.section-title { font-size: 2.2em; }
-            .sortiment-buttons { gap: 10px; }
-            .sortiment-btn { padding: 10px 18px; font-size: 0.9em; }
-        }
-    
+  .category-grid {
+    grid-template-columns: 1fr; /* 1 Spalte */
+  }
+
+  .category-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+      
