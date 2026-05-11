@@ -11,89 +11,79 @@
 
   <link rel="stylesheet" href="/style.css" />
 </head>
-<body>
-  <div class="top-strip"></div>
+<body style="font-family: 'Georgia', serif; background-color: #fdf6f2; color: #5a4a42; margin: 0; padding: 0;">
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#top" class="logo-link">
-        <img src="/logo.jpg" alt="Fabelhafte Funde Logo" class="logo" />
-      </a>
+    <header style="text-align: center; padding: 40px 20px; background-color: #ffffff; border-bottom: 1px solid #e2d1c3;">
+        <h1 style="color: #8c6473; font-size: 2.5rem; margin: 0;">Öffnungszeiten</h1>
+        <p style="font-style: italic; color: #a68b8b; margin-top: 10px;">Wir freuen uns auf deinen Besuch bei "Fabelhafte Funde".</p>
+    </header>
 
-      <nav class="main-nav">
-        <a href="/">Startseite</a>
-        <a href="#ueber">Über uns</a>
-        <a href="#sortiment">Sortiment</a>
-        <a href="/oeffnungszeiten/">Öffnungszeiten</a>
-        <a href="#galerie">Galerie</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </div>
-    <div class="header-scallop"></div>
-  </header>
+    <main style="max-width: 900px; margin: 40px auto; padding: 20px; background: #ffffff; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+        
+        <section style="text-align: center; margin-bottom: 50px;">
+            <h2 style="color: #8c6473; border-bottom: 1px solid #eee; padding-bottom: 10px;">Reguläre Zeiten</h2>
+            <p style="font-size: 1.2rem; margin: 20px 0;">
+                <strong>Jeden Samstag:</strong><br>
+                11:00 – 16:00 Uhr
+            </p>
+        </section>
 
-  <main id="top">
-    <section class="hours-section" id="zeiten">
-      <div class="container hours-grid">
-        <div class="hours-text">
-          <h2>Öffnungszeiten</h2>
-          <p class="hours-day">Jeden Samstag</p>
-          <p class="hours-time">11:00 – 16:00 Uhr</p>
-          <!-- Die Tabelle, die gefüllt wird -->
-<div id="zeiten-container">
-<h3>Aktuelle Sonderöffnungszeiten</h3>
-<table border="1" style="width:100%; border-collapse: collapse;">
-<thead>
-<tr style="background:#eee;">
-<th>Datum</th>
-<th>Status</th>
-<th>Grund/Info</th>
-</tr>
-</thead>
-<tbody id="oeffnungszeiten-body">
-<!-- Hier erscheinen die Daten -->
-</tbody>
-</table>
-</div>
+        <section id="sonderzeiten-section">
+            <h2 style="color: #8c6473; text-align: center; margin-bottom: 20px;">Besondere Termine & Urlaub</h2>
+            <p style="text-align: center; font-size: 0.9rem; color: #a68b8b; margin-bottom: 20px;">(Hier findest du Infos zu Betriebsferien oder gesonderten Samstagen)</p>
+            
+            <table style="width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 10px;">
+                <thead>
+                    <tr style="background-color: #b08494; color: white;">
+                        <th style="padding: 15px; text-align: left;">Datum / Zeitraum</th>
+                        <th style="padding: 15px; text-align: left;">Status</th>
+                        <th style="padding: 15px; text-align: left;">Anmerkung</th>
+                    </tr>
+                </thead>
+                <tbody id="oeffnungszeiten-body">
+                    <tr>
+                        <td colspan="3" style="padding: 20px; text-align: center; color: #ccc;">Lade aktuelle Termine...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 
-<script>
-// Script zum Laden der JSON-Datei
-fetch('oeffnungszeiten.json')
-.then(response => response.json())
-.then(data => {
-const tbody = document.getElementById('oeffnungszeiten-body');
-tbody.innerHTML = ''; // Platzhalter leeren
-data.forEach(item => {
-const row = `<tr>
-<td>${item.datum}</td>
-<td>${item.status}</td>
-<td>${item.grund || '-'}</td>
-</tr>`;
-tbody.innerHTML += row;
-});
-})
-.catch(err => {
-console.error("Fehler beim Laden der Zeiten:", err);
-document.getElementById('zeiten-container').style.display =
-'none';
-});
-</script>
-          <p class="hours-address" id="kontakt">
-            Bruchsaler Straße 9a<br>
-            76698 Ubstadt-Weiher
-          </p>
-        </div>
+    <footer style="text-align: center; padding: 40px; color: #a68b8b; font-size: 0.9rem;">
+        <p>Bruchsaler Straße 9a, 76698 Ubstadt-Weiher</p>
+        <a href="index.html" style="color: #b08494; text-decoration: none; font-weight: bold;">← Zurück zur Startseite</a>
+    </footer>
 
-        <div class="map-card">
-          <iframe
-            title="Karte Fabelhafte Funde"
-            src="https://www.google.com/maps?q=Bruchsaler%20Stra%C3%9Fe%209a,%2076698%20Ubstadt-Weiher&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </section>
-  </main>
+    <script>
+        fetch('oeffnungszeiten.json')
+            .then(response => response.json())
+            .then(data => {
+                const tbody = document.getElementById('oeffnungszeiten-body');
+                
+                if (data.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="3" style="padding: 20px; text-align: center;">Aktuell stehen keine außergewöhnlichen Termine an.</td></tr>';
+                    return;
+                }
+
+                tbody.innerHTML = ''; // Platzhalter leeren
+                data.forEach((item, index) => {
+                    const row = document.createElement('tr');
+                    // Wechselnde Hintergrundfarbe für bessere Lesbarkeit
+                    row.style.backgroundColor = index % 2 === 0 ? '#fafafa' : '#ffffff';
+                    row.style.borderBottom = '1px solid #eee';
+                    
+                    row.innerHTML = `
+                        <td style="padding: 15px;">${item.datum}</td>
+                        <td style="padding: 15px; font-weight: bold; color: ${item.status.toLowerCase().includes('zu') || item.status.toLowerCase().includes('geschlossen') ? '#c0392b' : '#27ae60'};">${item.status}</td>
+                        <td style="padding: 15px; font-style: italic;">${item.grund || '-'}</td>
+                    `;
+                    tbody.appendChild(row);
+                });
+            })
+            .catch(err => {
+                console.error("Fehler beim Laden:", err);
+                document.getElementById('oeffnungszeiten-body').innerHTML = '<tr><td colspan="3" style="padding: 20px; text-align: center; color: #c0392b;">Termine konnten nicht geladen werden.</td></tr>';
+            });
+    </script>
 </body>
 </html>
