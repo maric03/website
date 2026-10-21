@@ -167,9 +167,10 @@
     }
     kommende.forEach(function (t) {
       var zeile = document.createElement('tr');
-      [terminDatum(t), t.status, terminDetails(t) || '–'].forEach(function (inhalt) {
+      [terminDatum(t), t.status, terminDetails(t)].forEach(function (inhalt) {
         var td = document.createElement('td');
-        td.textContent = inhalt;
+        td.textContent = inhalt || '–';
+        if (!inhalt) td.className = 'leer';
         zeile.appendChild(td);
       });
       tbody.appendChild(zeile);

@@ -1883,3 +1883,353 @@ html {
     font-size: 2.6rem;
   }
 }
+
+/* ==========================================================================
+   MOBILE OPTIMIERUNG (alle Seiten)
+   ========================================================================== */
+
+.nav-toggle {
+  display: none;
+}
+
+.map-consent-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+@media (max-width: 760px) {
+  /* Kompakter Header mit Menü-Button */
+  .header-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 0;
+    gap: 0;
+    padding: 10px 0;
+  }
+
+  .logo-link {
+    margin-top: 0;
+  }
+
+  .logo {
+    width: 68px;
+    height: 68px;
+  }
+
+  .js .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 0 18px;
+    border-radius: 999px;
+    border: 1px solid #c9a3b0;
+    background: #fffaf8;
+    color: var(--rose-deep);
+    font-family: "Libre Baskerville", serif;
+    font-size: 0.92rem;
+    cursor: pointer;
+  }
+
+  .nav-toggle .icon-close,
+  .nav-toggle[aria-expanded="true"] .icon-menu {
+    display: none;
+  }
+
+  .nav-toggle[aria-expanded="true"] .icon-close {
+    display: block;
+  }
+
+  .main-nav {
+    width: 100%;
+    margin: 10px 0 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    font-size: 1.05rem;
+  }
+
+  .js .main-nav {
+    display: none;
+  }
+
+  .js .main-nav.is-open {
+    display: flex;
+  }
+
+  .main-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    padding: 0 6px;
+    border-top: 1px solid rgba(132, 95, 105, 0.14);
+  }
+
+  .main-nav a[aria-current="page"] {
+    border-bottom: 0;
+    padding-bottom: 0;
+    background: rgba(179, 123, 144, 0.1);
+  }
+
+  /* Überschriften: Ornamente nur, wenn genug Platz ist */
+  .section {
+    padding: 40px 0 32px;
+  }
+
+  .section-title {
+    margin-bottom: 24px;
+  }
+
+  /* Hero */
+  .hero,
+  .hero-content {
+    min-height: 0;
+  }
+
+  .hero-text {
+    padding: 44px 0 52px;
+  }
+
+  .live-status {
+    padding: 10px 16px;
+    margin-bottom: 22px;
+  }
+
+  .hero-subtitle {
+    margin-bottom: 14px;
+  }
+
+  .hero-claim {
+    margin-bottom: 26px;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+  }
+
+  .hero-notice {
+    margin-top: 22px;
+    padding: 14px 16px;
+  }
+
+  /* Sortiment-Kacheln als kompakte Zeilen (Startseite + Galerie) */
+  .card-grid {
+    gap: 12px;
+  }
+
+  .info-card {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    column-gap: 16px;
+    align-items: center;
+    text-align: left;
+    padding: 16px 18px;
+  }
+
+  .info-card .card-icon {
+    grid-row: 1 / span 3;
+    width: 60px;
+    height: 60px;
+    margin: 0;
+  }
+
+  .info-card h3 {
+    margin: 0 0 4px;
+    font-size: 1.35rem;
+  }
+
+  .info-card br {
+    display: none;
+  }
+
+  .card-more {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 6px;
+    padding-top: 0;
+  }
+
+  /* Ware abgeben */
+  .howto-section {
+    padding: 44px 0;
+  }
+
+  .howto-grid {
+    gap: 24px;
+  }
+
+  .howto-steps {
+    gap: 12px;
+  }
+
+  .howto-step {
+    padding: 20px 18px;
+  }
+
+  /* Besuch planen / So findest du uns */
+  .hours-section {
+    padding: 40px 0 44px;
+  }
+
+  .hours-grid {
+    gap: 28px;
+  }
+
+  .map-card,
+  .map-consent {
+    min-height: 0;
+  }
+
+  /* Kontaktseite */
+  .page-intro-overlay {
+    padding: 48px 16px 44px;
+  }
+
+  .contact-cards {
+    padding: 32px 0 8px;
+  }
+
+  .contact-card-grid {
+    gap: 12px;
+  }
+
+  .contact-card {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    column-gap: 16px;
+    row-gap: 2px;
+    align-items: center;
+    text-align: left;
+    padding: 18px;
+  }
+
+  .contact-icon {
+    grid-row: 1 / span 3;
+    width: 52px;
+    height: 52px;
+    margin: 0;
+  }
+
+  .contact-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contact-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .contact-card p {
+    font-size: 1.15rem;
+  }
+
+  .pill-link {
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 8px;
+  }
+
+  .contact-section {
+    padding: 32px 0 48px;
+  }
+
+  .aside-card {
+    padding: 24px 20px;
+  }
+
+  /* iOS zoomt bei Schrift unter 16px ins Formular – daher 16px */
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    font-size: 16px;
+  }
+
+  /* Galerie */
+  .galerie-subpage-wrapper {
+    padding: 28px 0;
+  }
+
+  .sortiment-top {
+    margin-bottom: 20px;
+  }
+
+  .sortiment-top h2 {
+    margin: 0 0 6px;
+    font-size: 2rem;
+  }
+
+  .sortiment-intro-claim {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+
+  /* Footer etwas kompakter */
+  .footer-inner {
+    padding-top: 32px;
+  }
+
+  .footer-ornament {
+    margin-bottom: 28px;
+  }
+
+  .footer-grid {
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title .ornament-line {
+    display: none;
+  }
+
+  .section-title h2 {
+    text-align: center;
+  }
+}
+
+/* Tabelle der Sondertermine auf schmalen Bildschirmen untereinander */
+@media (max-width: 600px) {
+  .termine-tabelle thead {
+    display: none;
+  }
+
+  .termine-tabelle,
+  .termine-tabelle tbody,
+  .termine-tabelle tr,
+  .termine-tabelle td {
+    display: block;
+    width: 100%;
+  }
+
+  #oeffnungszeiten-body tr {
+    padding: 16px 20px;
+    border-top: 1px solid #f2e8e4;
+  }
+
+  #oeffnungszeiten-body tr:first-child {
+    border-top: 0;
+  }
+
+  #oeffnungszeiten-body td {
+    padding: 0;
+    border: 0;
+  }
+
+  #oeffnungszeiten-body td:first-child {
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  #oeffnungszeiten-body td.leer {
+    display: none;
+  }
+}
