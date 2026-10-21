@@ -1173,6 +1173,16 @@ html {
   margin: 0;
 }
 
+.legal-content p + p {
+  margin-top: 10px;
+}
+
+.legal-content a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
 /* "So findest du uns" nutzt .hours-section / .hours-grid / .map-card */
 
 .find-us-note {
