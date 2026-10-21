@@ -1888,7 +1888,8 @@ html {
    MOBILE OPTIMIERUNG (alle Seiten)
    ========================================================================== */
 
-.nav-toggle {
+.nav-toggle,
+.sondertermin-mobil {
   display: none;
 }
 
@@ -2014,6 +2015,21 @@ html {
   .hero-notice {
     margin-top: 22px;
     padding: 14px 16px;
+  }
+
+  /* Sondertermin untereinander: Sondertermin: / Tag / Status / Alle Termine */
+  .hero-notice .sondertermin-text {
+    display: none;
+  }
+
+  .hero-notice .sondertermin-mobil,
+  .sondertermin-mobil > *,
+  .hero-notice a {
+    display: block;
+  }
+
+  .hero-notice a {
+    margin-top: 4px;
   }
 
   /* Sortiment-Kacheln als kompakte Zeilen (Startseite + Galerie) */
