@@ -20,10 +20,6 @@
             color: inherit;
             display: block;
         }
-        /* Sorgt dafür, dass beim Springen der Header nichts verdeckt */
-        .galerie-item {
-            scroll-margin-top: 120px;
-        }
     </style>
 </head>
 <body>
@@ -51,7 +47,7 @@
         <div class="header-scallop"></div>
     </header>
 
-    <div class="content-wrapper">
+    <main id="top">
 
         <section class="section section-light" id="sortiment">
             <div class="container">
@@ -65,7 +61,6 @@
                     <!-- KARTE 1: FRAUEN -->
                     <a href="#frauen" class="card-link">
                         <article class="info-card">
-                            <!-- BILD HIER: Icon Kleid -->
                             <img src="/assets/img/icons/kleid.png" alt="Kleidung für Frauen" class="card-icon" />
                             <h3>Kleidung für Frauen</h3>
                             <p>Mode für Frauen und Teens, <br>Schuhe und Accessoires</p>
@@ -75,7 +70,6 @@
                     <!-- KARTE 2: MÄNNER -->
                     <a href="#maenner" class="card-link">
                         <article class="info-card">
-                            <!-- BILD HIER: Icon Shirt -->
                             <img src="/assets/img/icons/shirt.png" alt="Männer und Teens" class="card-icon" />
                             <h3>Männer &amp; Teens</h3>
                             <p>Jungen- und Männermode <br>sowie Schuhe</p>
@@ -85,7 +79,6 @@
                     <!-- KARTE 3: KINDER -->
                     <a href="#kinder" class="card-link">
                         <article class="info-card">
-                            <!-- BILD HIER: Icon Bär -->
                             <img src="/assets/img/icons/baer.png" alt="Kinderartikel" class="card-icon" />
                             <h3>Kinderartikel</h3>
                             <p>Spielzeug und Geschenke <br>für Kinder</p>
@@ -95,7 +88,6 @@
                     <!-- KARTE 4: HAUSHALT -->
                     <a href="#haushalt" class="card-link">
                         <article class="info-card">
-                            <!-- BILD HIER: Icon Lampe -->
                             <img src="/assets/img/icons/lampe.png" alt="Haushalts- und Dekoartikel" class="card-icon" />
                             <h3>Haushalts- &amp; <br>Dekoartikel</h3>
                             <p>Möbel, Deko und <br>besondere Fundstücke</p>
@@ -105,8 +97,6 @@
             </div>
         </section>
 
-        <div class="galerie-section">
-            <div id="gallery" class="galerie-grid">
                 <div class="galerie-subpage-wrapper">
                     <div class="container">
                         <div class="sortiment-top">
@@ -278,9 +268,7 @@
                     </div>
                 </div>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.0.9/index.min.js"></script>
-            </div>
-        </div>
-    </div>
+    </main>
 
   <!-- FOOTER (auf allen Seiten gleich) -->
   <footer class="site-footer">

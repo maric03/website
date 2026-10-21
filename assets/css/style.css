@@ -271,28 +271,6 @@ a {
   color: #76565d;
 }
 
-.cta-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 330px;
-  min-height: 62px;
-  padding: 0 32px;
-  border-radius: 999px;
-  color: #fff8f5;
-  font-size: 1.02rem;
-  background: linear-gradient(to bottom, #bf8aa0, #ab7387);
-  border: 1px solid rgba(117, 79, 90, 0.24);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.28),
-    0 5px 12px rgba(109, 71, 83, 0.18);
-}
-
-.cta-small {
-  min-width: 290px;
-  min-height: 56px;
-}
-
 /* GENERAL SECTION */
 
 .section {
@@ -357,15 +335,6 @@ a {
   box-shadow: var(--shadow);
 }
 
-.icon-top-bar {
-  width: 84px;
-  height: 10px;
-  margin: 0 auto 14px;
-  border-radius: 6px;
-  background: linear-gradient(to right, #e9d1d6, #f4e8ea, #e9d1d6);
-  opacity: 0.95;
-}
-
 .card-icon {
   width: 78px;
   height: 78px;
@@ -390,33 +359,6 @@ a {
   color: #70565d;
 }
 
-/* GALLERY */
-
-.gallery-section {
-  padding-top: 18px;
-  padding-bottom: 56px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  aspect-ratio: 1 / 0.82;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-}
-
-.gallery-button-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
 /* HOURS */
 
 .hours-section {
@@ -425,27 +367,12 @@ a {
   border-top: 4px solid rgba(114, 72, 83, 0.12);
 }
 
-
-
 .hours-text h2 {
   margin: 0 0 18px;
   font-family: "Cormorant Garamond", serif;
   font-size: 4rem;
   font-weight: 500;
   line-height: 1;
-}
-
-.hours-day {
-  margin: 0 0 10px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2.3rem;
-  font-style: italic;
-}
-
-.hours-time {
-  margin: 0 0 24px;
-  font-size: 2.05rem;
-  line-height: 1.2;
 }
 
 .hours-address {
@@ -508,7 +435,6 @@ a {
   }
 
   .card-grid,
-  .gallery-grid,
   .hours-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -550,13 +476,7 @@ a {
     font-size: 1.35rem;
   }
 
-  .cta-button {
-    width: 100%;
-    min-width: 0;
-  }
-
   .card-grid,
-  .gallery-grid,
   .hours-grid {
     grid-template-columns: 1fr;
   }
@@ -572,14 +492,6 @@ a {
   .section-title h2,
   .hours-text h2 {
     font-size: 2.6rem;
-  }
-
-  .hours-day {
-    font-size: 1.9rem;
-  }
-
-  .hours-time {
-    font-size: 1.6rem;
   }
 }
 
@@ -615,126 +527,6 @@ a {
   margin-bottom: 30px;
 }
 
-/* Button-Gruppe */
-.sortiment-jump-nav {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-/* Button-Stil (Altrose) übernommen von .cta-button, aber kleiner */
-.category-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 250px;
-  min-height: 52px;
-  padding: 0 24px;
-  border-radius: 999px;
-  color: #fff8f5;
-  font-size: 1rem;
-  background: linear-gradient(to bottom, #bf8aa0, #ab7387); /* Dein Altrose */
-  border: 1px solid rgba(117, 79, 90, 0.24);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.12),
-    0 4px 10px rgba(109, 71, 83, 0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.category-btn:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.18),
-    0 6px 15px rgba(109, 71, 83, 0.16);
-}
-
-/* --- GALERIE SEKTION (Unten) --- */
-
-.galerie-main {
-  padding-top: 30px;
-}
-
-.galerie-main h2 {
-  margin: 0 0 40px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 4rem; /* Groß wie ein h2 */
-  font-weight: 500;
-  color: var(--rose-deep);
-  text-align: center;
-  position: relative;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Spezifische Schnörkel für das Galerie-h2 */
-.galerie-main h2::before,
-.galerie-main h2::after {
-  content: "❦";
-  font-size: 0.6em;
-  color: #bcaaa4;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.galerie-main h2::before { left: -45px; }
-.galerie-main h2::after { right: -45px; }
-
-
-/* Kategorie-Box-Spezifisches Grid */
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 Spalten */
-  gap: 22px; /* Etwas mehr Abstand */
-}
-
-/* Die Kategorie-Boxen (erben viel von .info-card) */
-.category-box {
-  position: relative;
-  background: #faf3ef; /* Dein Creme-Weiß */
-  border: 1px solid var(--card-border);
-  border-radius: 20px;
-  text-align: center;
-  padding: 0 0 24px; /* Oben kein Padding, da Bild bündig */
-  box-shadow: var(--shadow);
-  overflow: hidden; /* Wichtig für das bündige Bild */
-  transition: transform 0.3s ease;
-}
-
-.category-box:hover {
-  transform: translateY(-5px);
-}
-
-/* Das bündige Bild */
-.category-box img {
-  width: 100%;
-  height: 250px; /* Feste Höhe, wie auf Hauptseite */
-  aspect-ratio: auto;
-  object-fit: cover;
-  border-radius: 0; /* Keinen Eckenradius für das Bild */
-  margin-bottom: 20px;
-}
-
-.category-box h3 {
-  margin: 0 18px 12px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #5f454c;
-  line-height: 1.16;
-}
-
-.category-box p {
-  margin: 0 18px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.2rem;
-  line-height: 1.32;
-  color: #70565d;
-}
-
 /* --- RESPONSIVE ANPASSUNGEN FÜR DIE NEUE SEITE --- */
 
 @media (max-width: 1100px) {
@@ -745,14 +537,6 @@ a {
   .sortiment-intro-claim {
     font-size: 1.8rem;
   }
-
-  .galerie-main h2 {
-    font-size: 3.2rem;
-  }
-
-  .category-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 Spalten */
-  }
 }
 
 @media (max-width: 760px) {
@@ -762,22 +546,6 @@ a {
 
   .sortiment-intro-claim {
     font-size: 1.5rem;
-  }
-
-  .galerie-main h2 {
-    font-size: 2.6rem;
-  }
-
-  .galerie-main h2::before { left: -35px; }
-  .galerie-main h2::after { right: -35px; }
-
-  .category-grid {
-    grid-template-columns: 1fr; /* 1 Spalte */
-  }
-
-  .category-btn {
-    width: 100%;
-    min-width: 0;
   }
 }
 /* Galerie Raster mit Klick-Funktion */
@@ -824,29 +592,6 @@ a {
 html {
   /* Erzwingt den Scrollbalken immer, auch wenn kein Inhalt da ist */
   overflow-y: scroll;
-}
-.bild-container {
-  width: 300px; /* Beliebige Breite */
-  height: 300px; /* Beliebige Höhe */
-  
-  border-radius: 20px; /* Hier setzen wir die Abrundung an */
-  
-  /* Das ist der wichtigste Befehl: Er schneidet alles ab, 
-     was über die abgerundeten Ecken hinaussteht */
-  overflow: hidden; 
-  
-  /* Optional: Ein Schatten für besseren Effekt */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-}
-
-/* Wir stylen das Bild innerhalb des Containers */
-.bild-container img {
-  width: 100%;
-  height: 100%;
-  
-  /* Das sorgt dafür, dass das Bild den Container ausfüllt, 
-     ohne verzerrt zu werden (es wird beschnitten, falls nötig) */
-  object-fit: cover;
 }
 
 /* ==========================================================================
