@@ -420,7 +420,7 @@ a {
 /* HOURS */
 
 .hours-section {
-  background: linear-gradient(to bottom, #af7589, #a2697c);
+  background: linear-gradient(to bottom, #9f687a, #93596c);
   padding: 42px 0 56px;
   border-top: 4px solid rgba(114, 72, 83, 0.12);
 }
@@ -1552,4 +1552,334 @@ html {
 .map-consent-link {
   font-size: 0.85rem;
   color: #7a4f5f;
+}
+
+/* ==========================================================================
+   STARTSEITE: Live-Status, Buttons, Kacheln, Ablauf, Besuch planen
+   ========================================================================== */
+
+.live-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 100%;
+  min-height: 48px;
+  margin: 0 0 30px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: #fffaf8;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 6px 18px rgba(102, 73, 82, 0.1);
+  font-size: 0.98rem;
+  line-height: 1.45;
+  color: #5f454c;
+  text-align: left;
+}
+
+.live-status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #b8a1a8;
+  box-shadow: 0 0 0 4px rgba(154, 98, 116, 0.15);
+  flex-shrink: 0;
+}
+
+.live-status.is-open .live-status-dot {
+  background: #2f7a4a;
+  box-shadow: 0 0 0 4px rgba(47, 122, 74, 0.18);
+}
+
+.live-status.is-closed .live-status-dot {
+  background: #9a6274;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn-primary {
+  gap: 10px;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 260px;
+  min-height: 58px;
+  padding: 0 32px;
+  border-radius: 999px;
+  background: rgba(255, 250, 248, 0.92);
+  color: var(--rose-deep);
+  border: 1px solid #c9a3b0;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #fffaf8;
+  transform: translateY(-2px);
+}
+
+.btn-small {
+  min-width: 0;
+  min-height: 52px;
+  padding: 0 26px;
+  font-size: 0.95rem;
+}
+
+.hero-notice {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 620px;
+  margin: 32px auto 0;
+  padding: 16px 22px;
+  border-radius: 16px;
+  background: #fff4e8;
+  border: 1px solid #ecd2b4;
+  color: #5e4026;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.hero-notice[hidden] {
+  display: none;
+}
+
+.hero-notice svg {
+  flex-shrink: 0;
+}
+
+.hero-notice a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Verlinkte Sortiment-Kacheln */
+
+.info-card--link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card--link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(102, 73, 82, 0.12);
+}
+
+.info-card--link:focus-visible {
+  outline: 2px solid var(--rose);
+  outline-offset: 3px;
+}
+
+.card-more {
+  margin-top: auto;
+  padding-top: 14px;
+  display: inline-flex;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: #7a4f5f;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* So funktioniert's / Ware abgeben */
+
+.howto-section {
+  background: var(--bg-main);
+  padding: 72px 0;
+  border-top: 1px solid var(--card-border);
+}
+
+.howto-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 56px;
+  align-items: center;
+}
+
+.howto-intro {
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7d5b64;
+}
+
+.howto-intro h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.4rem;
+  font-weight: 500;
+  line-height: 1.02;
+  color: var(--rose-deep);
+}
+
+.howto-claim {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.45rem;
+  font-style: italic;
+  line-height: 1.35;
+  color: #6e4f57;
+}
+
+.howto-intro .btn-small {
+  margin-top: 10px;
+}
+
+.howto-steps {
+  flex: 2 1 560px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.howto-step {
+  background: #faf3ef;
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 26px 22px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.howto-number {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f1e2e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--rose-deep);
+}
+
+.howto-step h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #5f454c;
+}
+
+.howto-step p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* Besuch planen */
+
+.visit-text {
+  gap: 22px;
+}
+
+.visit-text h2 {
+  margin: 0;
+}
+
+.visit-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 48px;
+}
+
+.visit-facts p {
+  margin: 0;
+}
+
+.visit-label {
+  margin-bottom: 8px !important;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.visit-value {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.visit-day {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  line-height: 1.1;
+}
+
+.visit-time {
+  margin-top: 2px !important;
+  font-size: 1.1rem;
+}
+
+.visit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+}
+
+.visit-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #fff7f4;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Tabelle der Sondertermine (Seite Öffnungszeiten) */
+
+#oeffnungszeiten-body td {
+  padding: 18px 20px;
+  border-top: 1px solid #f2e8e4;
+  vertical-align: top;
+}
+
+#oeffnungszeiten-body .termine-leer {
+  font-style: italic;
+  color: #7d5b64;
+}
+
+@media (max-width: 760px) {
+  .live-status {
+    font-size: 0.88rem;
+    border-radius: 20px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .howto-intro h2 {
+    font-size: 2.6rem;
+  }
 }

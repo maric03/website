@@ -33,6 +33,10 @@
         
         <section style="text-align: center; margin-bottom: 60px;">
             <h2 style="font-family: 'Georgia', serif; color: #8c6473; font-size: 2rem; font-weight: normal; margin-bottom: 25px;">Unsere Öffnungszeiten</h2>
+            <p class="live-status" data-live-status role="status">
+                <span class="live-status-dot" aria-hidden="true"></span>
+                <span class="live-status-text"><strong>Jeden Samstag</strong> 11–16 Uhr</span>
+            </p>
             <div style="background: #ffffff; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
                 <p style="font-size: 1.2rem; margin: 10px 0;"><strong>Jeden Samstag</strong></p>
                 <p style="font-size: 1.1rem; color: #8c6473;">11:00 – 16:00 Uhr</p>
@@ -115,46 +119,6 @@
     </div>
     <div class="footer-strip"></div>
   </footer>
-
-  <script>
-  // DEINE DATEN - BITTE PRÜFEN:
-  const username = "maric03"; 
-  const repo = "website"; // Falls dein Repo anders heißt, hier ändern
-  const folder = "oeffnungszeiten_daten";
-
-  async function ladeZeiten() {
-    const tbody = document.getElementById('oeffnungszeiten-body');
-    if (!tbody) return;
-
-    try {
-      // 1. Liste der Dateien im Ordner abrufen
-      const response = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/${folder}`);
-      const files = await response.json();
-
-      tbody.innerHTML = ''; // Tabelle leeren
-
-      // 2. Jede Datei durchgehen
-      for (const file of files) {
-        if (file.name.endsWith('.md')) {
-          const fileRes = await fetch(file.download_url);
-          const text = await fileRes.json(); // Pages CMS speichert JSON oft IN der MD-Datei
-          
-          // Wir bauen die Zeile für die Tabelle
-          const row = `
-            <tr>
-              <td style="padding: 10px; border: 1px solid #ddd;">${text.datum || '-'}</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">${text.status || '-'}</td>
-              <td style="padding: 10px; border: 1px solid #ddd;">${text.grund || '-'}</td>
-            </tr>`;
-          tbody.innerHTML += row;
-        }
-      }
-    } catch (err) {
-      console.error("Fehler beim Laden:", err);
-      tbody.innerHTML = '<tr><td colspan="3">Keine Termine gefunden.</td></tr>';
-    }
-  }
-  ladeZeiten();
-</script>
+  <script src="/oeffnungszeiten.js"></script>
 </body>
 </html>
