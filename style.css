@@ -221,7 +221,7 @@ a {
 .hero {
   position: relative;
   min-height: 690px;
-  background: url("hero.jpg") center center / cover no-repeat;
+  background: url("hero-laden.jpg") center 55% / cover no-repeat;
   overflow: hidden;
 }
 
@@ -229,7 +229,7 @@ a {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at center, rgba(249, 241, 236, 0.70) 0%, rgba(249, 241, 236, 0.52) 28%, rgba(249, 241, 236, 0.24) 55%, rgba(249, 241, 236, 0.10) 78%, rgba(249, 241, 236, 0.03) 100%);
+    radial-gradient(ellipse at center, rgba(249, 241, 236, 0.86) 0%, rgba(249, 241, 236, 0.7) 32%, rgba(249, 241, 236, 0.3) 66%, rgba(249, 241, 236, 0.06) 100%);
 }
 
 .hero-content {
@@ -1989,6 +1989,15 @@ html {
   .hero,
   .hero-content {
     min-height: 0;
+  }
+
+  .hero {
+    background-image: url("hero-laden-mobil.jpg");
+    background-position: center 40%;
+  }
+
+  .hero-overlay {
+    background: radial-gradient(ellipse at center, rgba(249, 241, 236, 0.88) 0%, rgba(249, 241, 236, 0.78) 45%, rgba(249, 241, 236, 0.55) 100%);
   }
 
   .hero-text {
