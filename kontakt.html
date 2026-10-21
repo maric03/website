@@ -109,10 +109,7 @@
               <textarea id="k-msg" name="nachricht" rows="6" placeholder="Was möchtest du uns sagen?" required></textarea>
             </div>
 
-            <div class="form-consent">
-              <input id="k-privacy" type="checkbox" required />
-              <label for="k-privacy">Ich bin damit einverstanden, dass meine Angaben zur Beantwortung meiner Anfrage verwendet werden. Mehr dazu in der <a href="#datenschutz">Datenschutzerklärung</a>.</label>
-            </div>
+            <p class="form-consent">Hinweise zur Verarbeitung deiner Angaben findest du in der <a href="#datenschutz">Datenschutzerklärung</a>.</p>
 
             <div class="form-actions">
               <button type="submit" class="btn-primary">Nachricht senden</button>
@@ -132,7 +129,7 @@
               <p class="aside-day">Jeden Samstag</p>
               <p class="aside-time">11:00 – 16:00 Uhr</p>
               <p class="aside-text">Feiertage, Urlaub und besondere Termine findest du auf der Seite Öffnungszeiten.</p>
-              <a href="/oeffnungszeiten/" class="aside-button">Sonderöffnungszeiten ansehen
+              <a href="/oeffnungszeiten/" class="aside-button">Sondertermine ansehen
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
               </a>
             </div>
@@ -140,7 +137,7 @@
         </div>
 
         <div class="legal-list">
-          <details class="legal-item" id="impressum">
+          <details class="legal-item" id="impressum" open>
             <summary>
               <h2>Impressum</h2>
               <span class="legal-chevron" aria-hidden="true">
@@ -155,10 +152,6 @@
               <div>
                 <h3>Kontakt</h3>
                 <p>Telefon: 0179 6152951<br>E-Mail: S-lehnert@web.de</p>
-              </div>
-              <div>
-                <h3>Umsatzsteuer</h3>
-                <p>[USt-IdNr. oder Hinweis auf die Kleinunternehmerregelung – bitte ergänzen]</p>
               </div>
             </div>
           </details>
@@ -331,6 +324,8 @@
       window.location.href = 'mailto:S-lehnert@web.de' +
         '?subject=' + encodeURIComponent(betreff) +
         '&body=' + encodeURIComponent(text);
+      f.querySelector('.form-actions p').textContent =
+        'Dein E-Mail-Programm sollte sich jetzt öffnen. Falls nicht: schreib direkt an S-lehnert@web.de';
     });
   </script>
   <script src="/karte.js"></script>
