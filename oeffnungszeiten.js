@@ -143,9 +143,21 @@
       var fett = document.createElement('strong');
       fett.textContent = 'Sondertermin:';
       var details = terminDetails(naechster);
-      text.replaceChildren(fett, document.createTextNode(
-        ' ' + terminDatum(naechster) + ' – ' + naechster.status + (details ? ' (' + details + ')' : '')
-      ));
+      var status = naechster.status + (details ? ' (' + details + ')' : '');
+      // Große Ansicht: alles in einer Zeile
+      text.replaceChildren(fett, document.createTextNode(' ' + terminDatum(naechster) + ' – ' + status));
+      // Handy: dieselben Angaben untereinander (wird per CSS nur mobil angezeigt)
+      var mobil = el.querySelector('.sondertermin-mobil');
+      if (!mobil) {
+        mobil = document.createElement('span');
+        mobil.className = 'sondertermin-mobil';
+        text.after(mobil);
+      }
+      mobil.replaceChildren.apply(mobil, ['Sondertermin:', terminDatum(naechster), status].map(function (inhalt, i) {
+        var zeile = document.createElement(i === 0 ? 'strong' : 'span');
+        zeile.textContent = inhalt;
+        return zeile;
+      }));
       el.hidden = false;
     });
   }
@@ -167,9 +179,10 @@
     }
     kommende.forEach(function (t) {
       var zeile = document.createElement('tr');
-      [terminDatum(t), t.status, terminDetails(t) || '–'].forEach(function (inhalt) {
+      [terminDatum(t), t.status, terminDetails(t)].forEach(function (inhalt) {
         var td = document.createElement('td');
-        td.textContent = inhalt;
+        td.textContent = inhalt || '–';
+        if (!inhalt) td.className = 'leer';
         zeile.appendChild(td);
       });
       tbody.appendChild(zeile);
