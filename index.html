@@ -67,20 +67,33 @@
   </header>
 
   <main id="top">
+    <!-- 1. HERO MIT LIVE-STATUS -->
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-bottom-scallop"></div>
 
       <div class="container hero-content">
         <div class="hero-text">
+          <p class="live-status" data-live-status role="status">
+            <span class="live-status-dot" aria-hidden="true"></span>
+            <span class="live-status-text"><strong>Jeden Samstag</strong> 11–16 Uhr</span>
+          </p>
           <h1>Fabelhafte Funde</h1>
           <p class="hero-subtitle">Secondhand-Laden in Ubstadt-Weiher</p>
           <p class="hero-claim">Nachhaltige Kleidung und besondere Fundstücke.</p>
-          <a href="/oeffnungszeiten/" class="cta-button">Öffnungszeiten ansehen</a>
+          <div class="hero-buttons">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Bruchsaler+Stra%C3%9Fe+9a,+76698+Ubstadt-Weiher" class="btn-primary" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> Route planen</a>
+            <a href="#sortiment" class="btn-secondary">Sortiment ansehen <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="M6 13l6 6 6-6"/></svg></a>
+          </div>
+          <p class="hero-notice" data-sondertermin hidden>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18"/><path d="M8 2.5v4"/><path d="M16 2.5v4"/></svg>
+            <span><span class="sondertermin-text"></span> <a href="/oeffnungszeiten/">Alle Termine</a></span>
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- 2. SORTIMENT -->
     <section class="section section-light" id="sortiment">
       <div class="container">
         <div class="section-title">
@@ -90,61 +103,83 @@
         </div>
 
         <div class="card-grid">
-          <article class="info-card">
-            <img src="icon-dress.png" alt="Kleidung für Frauen" class="card-icon" />
+          <a href="/galerie.html#frauen" class="info-card info-card--link">
+            <img src="icon-dress.png" alt="" class="card-icon" />
             <h3>Kleidung für Frauen</h3>
             <p>Mode für Frauen und Teens,<br>Schuhe und Accessoires</p>
-          </article>
-
-          <article class="info-card">
-            <img src="icon-shirt.png" alt="Männer und Teens" class="card-icon" />
+            <span class="card-more">Ansehen <span aria-hidden="true">→</span></span>
+          </a>
+          <a href="/galerie.html#maenner" class="info-card info-card--link">
+            <img src="icon-shirt.png" alt="" class="card-icon" />
             <h3>Männer &amp; Teens</h3>
             <p>Jungen- und Männermode<br>sowie Schuhe</p>
-          </article>
-
-          <article class="info-card">
-            <img src="icon-bear.png" alt="Kinderartikel" class="card-icon" />
+            <span class="card-more">Ansehen <span aria-hidden="true">→</span></span>
+          </a>
+          <a href="/galerie.html#kinder" class="info-card info-card--link">
+            <img src="icon-bear.png" alt="" class="card-icon" />
             <h3>Kinderartikel</h3>
             <p>Spielzeug und Geschenke<br>für Kinder</p>
-          </article>
-
-          <article class="info-card">
-            <img src="icon-lamp.png" alt="Haushalts- und Dekoartikel" class="card-icon" />
+            <span class="card-more">Ansehen <span aria-hidden="true">→</span></span>
+          </a>
+          <a href="/galerie.html#haushalt" class="info-card info-card--link">
+            <img src="icon-lamp.png" alt="" class="card-icon" />
             <h3>Haushalts- &amp;<br>Dekoartikel</h3>
             <p>Möbel, Deko und<br>besondere Fundstücke</p>
-          </article>
+            <span class="card-more">Ansehen <span aria-hidden="true">→</span></span>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section section-light gallery-section" id="galerie">
-      <div class="container">
-        <div class="section-title">
-          <span class="ornament-line"></span>
-          <h2>Galerie</h2>
-          <span class="ornament-line"></span>
+    <!-- 3. SO FUNKTIONIERT'S / WARE ABGEBEN -->
+    <section class="howto-section">
+      <div class="container howto-grid">
+        <div class="howto-intro">
+          <p class="eyebrow">So funktioniert’s</p>
+          <h2>Ware abgeben</h2>
+          <p class="howto-claim">Gut erhaltene Lieblingsstücke verdienen ein zweites Leben.</p>
+          <a href="/kontakt.html" class="btn-primary btn-small">Fragen? Schreib uns</a>
         </div>
-
-        <div class="gallery-grid">
-          <img src="gallery-1.jpeg" alt="Galeriebild 1">
-          <img src="gallery-2.jpeg" alt="Galeriebild 2">
-          <img src="gallery-3.jpeg" alt="Galeriebild 3">
-          <img src="gallery-4.jpeg" alt="Galeriebild 4">
-        </div>
-
-        <div class="gallery-button-wrap">
-          <a href="galerie.html#gallery" class="cta-button cta-small">Mehr Bilder ansehen</a>
-        </div>
+        <ol class="howto-steps">
+          <li class="howto-step">
+            <span class="howto-number" aria-hidden="true">1</span>
+            <h3>Aussortieren</h3>
+            <p>Wir nehmen Kleidung und Schuhe an, aber auch Einrichtungsgegenstände, Spielsachen, Taschen und vieles mehr.</p>
+          </li>
+          <li class="howto-step">
+            <span class="howto-number" aria-hidden="true">2</span>
+            <h3>Zur passenden Saison bringen</h3>
+            <p><strong>Sommerware</strong> nehmen wir von Februar bis April an, <strong>Winterware</strong> von September bis Oktober.</p>
+          </li>
+          <li class="howto-step">
+            <span class="howto-number" aria-hidden="true">3</span>
+            <h3>Mitverdienen</h3>
+            <p>Wird dein Stück verkauft, erhältst du einen Anteil vom Verkaufspreis: <strong>20&nbsp;%</strong> bei Kleidung und Schuhen, <strong>50&nbsp;%</strong> bei allen anderen Waren.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section class="hours-section" id="zeiten">
+    <!-- 4. BESUCH PLANEN -->
+    <section class="hours-section" id="besuch">
       <div class="container hours-grid">
-        <div class="hours-text">
-          <h3>Öffnungszeiten</h3>
-          <p>Jeden Samstag<br>11:00 – 16:00 Uhr</p>
-          <h3 id="kontakt">Kontakt</h3>
-          <p> Simone Lehnert<br>Email: S-lehnert@web.de<br>Tel: 0179 6152951<br>Bruchsaler Straße 9a<br>76698 Ubstadt-Weiher</p>
+        <div class="hours-text visit-text">
+          <h2>Besuch planen</h2>
+          <div class="visit-facts">
+            <div>
+              <p class="visit-label">Adresse</p>
+              <p class="visit-value">Bruchsaler Straße 9a<br>76698 Ubstadt-Weiher</p>
+            </div>
+            <div>
+              <p class="visit-label">Öffnungszeiten</p>
+              <p class="visit-day">Jeden Samstag</p>
+              <p class="visit-time">11:00 – 16:00 Uhr</p>
+            </div>
+          </div>
+          <div class="visit-actions">
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Bruchsaler+Stra%C3%9Fe+9a,+76698+Ubstadt-Weiher" class="aside-button" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> Route planen</a>
+            <a href="/oeffnungszeiten/" class="visit-link">Sonderöffnungszeiten ansehen</a>
+          </div>
         </div>
 
         <div class="map-card">
@@ -214,5 +249,6 @@
     <div class="footer-strip"></div>
   </footer>
   <script src="/karte.js"></script>
+  <script src="/oeffnungszeiten.js"></script>
 </body>
 </html>
