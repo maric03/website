@@ -3,7 +3,7 @@
   ------------------------------------------------
   Reguläre Öffnungszeiten: unten in REGULAER.
   Sondertermine pflegt ihr im Pages CMS unter "Sonderöffnungszeiten"
-  (gespeichert in /sonderzeiten.json).
+  (gespeichert in /daten/sonderzeiten.json).
 
   Das Skript füllt automatisch:
   - [data-live-status]   → "Heute geöffnet bis 16 Uhr" / "Nächster Öffnungstag: …"
@@ -196,7 +196,7 @@
     zeigeTabelle(termine, jetzt);
   }
 
-  fetch('/sonderzeiten.json', { cache: 'no-cache' })
+  fetch('/daten/sonderzeiten.json', { cache: 'no-cache' })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (daten) { anzeigen(bereinigen(daten)); })
     .catch(function () { anzeigen([]); });

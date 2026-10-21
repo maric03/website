@@ -7,7 +7,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("fonts/cormorant-garamond-latin-400-normal.woff2") format("woff2");
+  src: url("/assets/fonts/cormorant-garamond-latin-400-normal.woff2") format("woff2");
 }
 
 @font-face {
@@ -15,7 +15,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("fonts/cormorant-garamond-latin-400-italic.woff2") format("woff2");
+  src: url("/assets/fonts/cormorant-garamond-latin-400-italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -23,7 +23,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2");
+  src: url("/assets/fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2");
 }
 
 @font-face {
@@ -31,7 +31,7 @@
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: url("fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2");
+  src: url("/assets/fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -39,7 +39,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2");
+  src: url("/assets/fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2");
 }
 
 @font-face {
@@ -47,7 +47,7 @@
   font-style: italic;
   font-weight: 600;
   font-display: swap;
-  src: url("fonts/cormorant-garamond-latin-600-italic.woff2") format("woff2");
+  src: url("/assets/fonts/cormorant-garamond-latin-600-italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -55,7 +55,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("fonts/cormorant-garamond-latin-700-normal.woff2") format("woff2");
+  src: url("/assets/fonts/cormorant-garamond-latin-700-normal.woff2") format("woff2");
 }
 
 @font-face {
@@ -63,7 +63,7 @@
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url("fonts/cormorant-garamond-latin-700-italic.woff2") format("woff2");
+  src: url("/assets/fonts/cormorant-garamond-latin-700-italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -71,7 +71,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("fonts/libre-baskerville-latin-400-normal.woff2") format("woff2");
+  src: url("/assets/fonts/libre-baskerville-latin-400-normal.woff2") format("woff2");
 }
 
 @font-face {
@@ -79,7 +79,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("fonts/libre-baskerville-latin-400-italic.woff2") format("woff2");
+  src: url("/assets/fonts/libre-baskerville-latin-400-italic.woff2") format("woff2");
 }
 
 @font-face {
@@ -87,7 +87,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("fonts/libre-baskerville-latin-700-normal.woff2") format("woff2");
+  src: url("/assets/fonts/libre-baskerville-latin-700-normal.woff2") format("woff2");
 }
 
 @font-face {
@@ -95,7 +95,7 @@
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url("fonts/libre-baskerville-latin-700-italic.woff2") format("woff2");
+  src: url("/assets/fonts/libre-baskerville-latin-700-italic.woff2") format("woff2");
 }
 
 /* ==========================================================================
@@ -221,7 +221,7 @@ a {
 .hero {
   position: relative;
   min-height: 690px;
-  background: url("hero-laden.jpg") center 55% / cover no-repeat;
+  background: url("/assets/img/hero/laden.jpg") center 55% / cover no-repeat;
   overflow: hidden;
 }
 
@@ -865,7 +865,7 @@ html {
    ========================================================================== */
 
 .page-intro {
-  background: url("hero.jpg") center / cover no-repeat;
+  background: url("/assets/img/hero/unterseiten.jpg") center / cover no-repeat;
 }
 
 .page-intro-overlay {
@@ -1992,7 +1992,7 @@ html {
   }
 
   .hero {
-    background-image: url("hero-laden-mobil.jpg");
+    background-image: url("/assets/img/hero/laden-mobil.jpg");
     background-position: center 40%;
   }
 
