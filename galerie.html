@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="logo.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
 
     <title>Sortiment & Galerie - Fabelhafte Funde</title>
     <link rel="stylesheet" href="style.css" />
@@ -38,10 +35,10 @@
             </a>
 
             <nav class="main-nav">
-                <a href="index.html">Startseite</a>
+                <a href="/">Startseite</a>
                 <a href="/oeffnungszeiten/">Öffnungszeiten</a>
-                <a href="/">Sortiment/Galerie</a>
-                <a href="kontakt.html">Kontakt</a>
+                <a href="/galerie.html" aria-current="page">Sortiment/Galerie</a>
+                <a href="/kontakt.html">Kontakt</a>
             </nav>
         </div>
         <div class="header-scallop"></div>
@@ -277,5 +274,59 @@
             </div>
         </div>
     </div>
+
+  <!-- FOOTER (auf allen Seiten gleich) -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-ornament" aria-hidden="true"><span></span>❦<span></span></div>
+
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <img src="/logo.jpg" alt="Fabelhafte Funde Logo" class="footer-logo" />
+          <p class="footer-name">Fabelhafte Funde</p>
+          <p class="footer-sub">Second-Hand-Store in Ubstadt-Weiher</p>
+          <p class="footer-claim">Nachhaltige Kleidung und besondere Fundstücke.</p>
+        </div>
+
+        <div class="footer-col">
+          <h2 class="footer-heading">Öffnungszeiten</h2>
+          <p class="footer-day">Jeden Samstag</p>
+          <p class="footer-time">11:00 – 16:00 Uhr</p>
+          <a href="/oeffnungszeiten/" class="footer-more">Sonderöffnungszeiten <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="footer-col">
+          <h2 class="footer-heading">Kontakt</h2>
+          <p class="footer-person">Simone Lehnert</p>
+          <p class="footer-address">Bruchsaler Straße 9a<br>76698 Ubstadt-Weiher</p>
+          <a href="tel:+491796152951" class="footer-contact">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d9b3bf" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            0179 6152951
+          </a>
+          <a href="mailto:S-lehnert@web.de" class="footer-contact">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d9b3bf" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 7 9-7"/></svg>
+            S-lehnert@web.de
+          </a>
+        </div>
+
+        <nav class="footer-col footer-nav" aria-label="Seiten">
+          <h2 class="footer-heading">Seiten</h2>
+          <a href="/">Startseite</a>
+          <a href="/oeffnungszeiten/">Öffnungszeiten</a>
+          <a href="/galerie.html">Sortiment/Galerie</a>
+          <a href="/kontakt.html">Kontakt</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Fabelhafte Funde · Simone Lehnert</p>
+        <nav class="footer-legal" aria-label="Rechtliches">
+          <a href="/kontakt.html#impressum">Impressum</a>
+          <a href="/kontakt.html#datenschutz">Datenschutz</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-strip"></div>
+  </footer>
 </body>
 </html>
