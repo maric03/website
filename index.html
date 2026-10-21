@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fabelhafte Funde</title>
   <link rel="icon" type="image/png" href="logo.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/style.css" />
 </head>
@@ -112,12 +109,13 @@
         </div>
 
         <div class="map-card">
-          <iframe
-            title="Karte Fabelhafte Funde"
-            src="https://www.google.com/maps?q=Bruchsaler%20Stra%C3%9Fe%209a,%2076698%20Ubstadt-Weiher&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+          <div class="map-consent" data-map-src="https://www.google.com/maps?q=Bruchsaler%20Stra%C3%9Fe%209a,%2076698%20Ubstadt-Weiher&amp;output=embed">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9a6274" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4L3 6.5v13.5l6-2.5 6 2.5 6-2.5V4l-6 2.5z"/><path d="M9 4v13.5"/><path d="M15 6.5V20"/></svg>
+            <p class="map-consent-title">Karte von Google Maps</p>
+            <p class="map-consent-text">Erst wenn du auf „Karte laden“ klickst, wird die Karte von Google geladen. Dabei werden Daten wie deine IP-Adresse an Google übertragen. Mehr dazu in der <a href="/kontakt.html#datenschutz">Datenschutzerklärung</a>.</p>
+            <button type="button" class="map-consent-button">Karte laden</button>
+            <a class="map-consent-link" href="https://www.google.com/maps/search/?api=1&amp;query=Bruchsaler+Stra%C3%9Fe+9a,+76698+Ubstadt-Weiher" target="_blank" rel="noopener">Stattdessen in Google Maps öffnen</a>
+          </div>
         </div>
       </div>
     </section>
@@ -176,5 +174,6 @@
     </div>
     <div class="footer-strip"></div>
   </footer>
+  <script src="/karte.js"></script>
 </body>
 </html>

@@ -1,4 +1,104 @@
 /* ==========================================================================
+   LOKALE SCHRIFTARTEN (keine Verbindung zu Google)
+   ========================================================================== */
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/cormorant-garamond-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/cormorant-garamond-latin-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/cormorant-garamond-latin-600-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/cormorant-garamond-latin-700-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/cormorant-garamond-latin-700-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/libre-baskerville-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/libre-baskerville-latin-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/libre-baskerville-latin-700-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Libre Baskerville";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/libre-baskerville-latin-700-italic.woff2") format("woff2");
+}
+
+/* ==========================================================================
    BASIS CSS (Dein bestehender Code)
    ========================================================================== */
 html {
@@ -1414,4 +1514,65 @@ html {
   .legal-content {
     margin: 0 20px;
   }
+}
+
+/* ==========================================================================
+   KARTE ERST NACH KLICK LADEN (Datenschutz)
+   ========================================================================== */
+
+.map-consent {
+  flex: 1;
+  min-height: 296px;
+  border-radius: 10px;
+  background: #f3e7e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 28px 24px;
+  text-align: center;
+  color: var(--text-main);
+}
+
+.map-consent-title {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--rose-deep);
+}
+
+.map-consent-text {
+  margin: 0;
+  max-width: 420px;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.map-consent-text a,
+.map-consent-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.map-consent-button {
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(117, 79, 90, 0.24);
+  background: #965f72;
+  color: #fffaf7;
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.map-consent-button:hover {
+  background: #85525f;
+}
+
+.map-consent-link {
+  font-size: 0.85rem;
+  color: #7a4f5f;
 }
