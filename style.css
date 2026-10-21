@@ -1892,13 +1892,13 @@ html {
   display: none;
 }
 
-.map-consent-link {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-}
-
 @media (max-width: 760px) {
+  .map-consent-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
   /* Kompakter Header mit Menü-Button */
   .header-inner {
     display: flex;
