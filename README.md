@@ -1,4 +1,4 @@
-# Fabelhafte Funde – Website
+# Fabelhafte Funde – Website 
 
 Website des Secondhand-Ladens Fabelhafte Funde in Ubstadt-Weiher, veröffentlicht über GitHub Pages unter [fabelhaftefunde.de](https://fabelhaftefunde.de).
 
