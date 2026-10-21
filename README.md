@@ -21,7 +21,7 @@ assets/
   img/icons/               Icons der Sortiments-Kacheln
   img/galerie/             Galeriebilder, benannt nach Kategorie (z. B. frauen-01.jpeg)
 
-daten/sonderzeiten.json    Sondertermine – wird über Pages CMS gepflegt
+sonderzeiten.json           Sondertermine – wird über Pages CMS gepflegt
 .pages.yml                 Einstellungen für Pages CMS
 CNAME                      eigene Domain für GitHub Pages
 ```
